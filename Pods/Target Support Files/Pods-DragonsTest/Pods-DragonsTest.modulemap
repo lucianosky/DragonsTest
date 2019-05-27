@@ -1,0 +1,6 @@
+framework module Pods_DragonsTest {
+  umbrella header "Pods-DragonsTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
