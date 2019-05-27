@@ -55,6 +55,7 @@
 		6E4949C6229C4806001612AF /* DragonsTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonsTestUITests.swift; sourceTree = "<group>"; };
 		6E4949C8229C4806001612AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E4949D4229C732F001612AF /* NaiveTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaiveTest.swift; sourceTree = "<group>"; };
+		6E4949D6229C74F1001612AF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		740AFB5541EE4E5A1AF1B02E /* Pods-DragonsTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonsTestTests.release.xcconfig"; path = "Target Support Files/Pods-DragonsTestTests/Pods-DragonsTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		843254010BE81CEF8F484A7B /* Pods-DragonsTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonsTest.debug.xcconfig"; path = "Target Support Files/Pods-DragonsTest/Pods-DragonsTest.debug.xcconfig"; sourceTree = "<group>"; };
 		9ECD061C809B2A80F5141ECC /* Pods-DragonsTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonsTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-DragonsTestUITests/Pods-DragonsTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 		6E494997229C4801001612AF = {
 			isa = PBXGroup;
 			children = (
+				6E4949D6229C74F1001612AF /* README.md */,
 				6E4949A2229C4802001612AF /* DragonsTest */,
 				6E4949BA229C4806001612AF /* DragonsTestTests */,
 				6E4949C5229C4806001612AF /* DragonsTestUITests */,
