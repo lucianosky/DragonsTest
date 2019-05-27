@@ -1,5 +1,5 @@
 //
-//  APIService.swift
+//  DataService.swift
 //  DragonsTest
 //
 //  Created by Luciano Sclovsky on 27/05/19.
@@ -8,15 +8,14 @@
 
 import Foundation
 
-protocol APIServiceProtocol {
-    
+protocol DataServiceProtocol {
 }
 
-class APIService: APIServiceProtocol {
+class DataService: DataServiceProtocol {
     
-    func request<T: Decodable> (
+    func request (
         _ urlString: String,
-        onCompleted: @escaping (APIResult<T>) -> Void) {
+        onCompleted: @escaping (APIResult<Data>) -> Void) {
         
         guard let url = URL(string: urlString) else {
             print("Error creating URL")
@@ -45,16 +44,7 @@ class APIService: APIServiceProtocol {
             print("data \(data)")
             print("response \(response)")
             print("statusCode \(httpResponse.statusCode)")
-
-            let decoder = JSONDecoder()
-            do {
-                let jsonResponse = try decoder.decode(T.self, from: data)
-                onCompleted(.success(jsonResponse))
-                print("APIService success!")
-            } catch let error {
-                print("error \(error)")
-                onCompleted(.failure(error))
-            }
+            onCompleted(.success(data))
             
         }
         task.resume()

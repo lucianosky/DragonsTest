@@ -13,8 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let url = "https://demo6649570.mockable.io/dragoslist"
-        let apiService = APIService()
-        apiService.request(url) { (result: APIResult<DragonsListResponse>) in
+        let jsonService = JSONService()
+        jsonService.request(url) { (result: APIResult<DragonsListResponse>) in
             switch(result) {
             case .success(let dragonsListResponse):
                 print("success \(dragonsListResponse.success)")
