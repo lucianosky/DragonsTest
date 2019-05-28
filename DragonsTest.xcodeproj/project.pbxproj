@@ -10,6 +10,7 @@
 		6E365EAD229D6A44000F829F /* DragonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E365EAC229D6A44000F829F /* DragonModel.swift */; };
 		6E365EAF229D6CBF000F829F /* DragonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E365EAE229D6CBF000F829F /* DragonResponse.swift */; };
 		6E365EB1229D7C2C000F829F /* Dragon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E365EB0229D7C2C000F829F /* Dragon.swift */; };
+		6E365EB3229D7DA8000F829F /* PListHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E365EB2229D7DA8000F829F /* PListHelper.swift */; };
 		6E4949A4229C4802001612AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949A3229C4802001612AF /* AppDelegate.swift */; };
 		6E4949A6229C4802001612AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949A5229C4802001612AF /* ViewController.swift */; };
 		6E4949A9229C4802001612AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4949A7229C4802001612AF /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		6E365EAC229D6A44000F829F /* DragonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonModel.swift; sourceTree = "<group>"; };
 		6E365EAE229D6CBF000F829F /* DragonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonResponse.swift; sourceTree = "<group>"; };
 		6E365EB0229D7C2C000F829F /* Dragon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dragon.swift; sourceTree = "<group>"; };
+		6E365EB2229D7DA8000F829F /* PListHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PListHelper.swift; sourceTree = "<group>"; };
 		6E4949A0229C4802001612AF /* DragonsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E4949A3229C4802001612AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E4949A5229C4802001612AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 			children = (
 				6E4949D9229C771C001612AF /* DragonError.swift */,
 				6E4949D7229C76DE001612AF /* DragonResult.swift */,
+				6E365EB2229D7DA8000F829F /* PListHelper.swift */,
 				6E4949E3229CA8F6001612AF /* TextFileHelper.swift */,
 			);
 			path = Helper;
@@ -508,6 +511,7 @@
 				6E4949DA229C771C001612AF /* DragonError.swift in Sources */,
 				6E4949A6229C4802001612AF /* ViewController.swift in Sources */,
 				6E365EB1229D7C2C000F829F /* Dragon.swift in Sources */,
+				6E365EB3229D7DA8000F829F /* PListHelper.swift in Sources */,
 				6E4949A4229C4802001612AF /* AppDelegate.swift in Sources */,
 				6E365EAF229D6CBF000F829F /* DragonResponse.swift in Sources */,
 				6E4949FB229CCEA8001612AF /* DataServiceMock.swift in Sources */,

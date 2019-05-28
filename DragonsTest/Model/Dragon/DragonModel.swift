@@ -22,8 +22,8 @@ class DragonModel: DragonModelProtocol {
 
     func getDragons(onCompleted: @escaping (DragonResult<[Dragon]>) -> Void) {
 
-        let url = "https://demo6649570.mockable.io/dragoslist"
-        self.jsonService.request(url) { (result: DragonResult<DragonsListResponse>) in
+        let fullURL = "\(PListHelper.baseURL)/dragoslist"
+        self.jsonService.request(fullURL) { (result: DragonResult<DragonsListResponse>) in
 
             switch(result) {
                 
