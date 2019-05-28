@@ -21,7 +21,7 @@ class DragonListViewController: BaseViewController {
    
     var viewModel: DragonListViewModelProtocol
     
-    let tableView = UITableView(.white, 50)
+    let tableView = UITableView(.white, 300)
 
     init(viewModel: DragonListViewModelProtocol? = nil) {
         self.viewModel = viewModel ?? DragonListViewModel()
@@ -42,7 +42,8 @@ class DragonListViewController: BaseViewController {
     private func createSubviews() {
         title = Consts.title
         view.backgroundColor = .white
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Consts.tableCellId)
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Consts.tableCellId)
+        tableView.register(DragonTableViewCell.self, forCellReuseIdentifier: Consts.tableCellId)
         tableView.dataSource = self
         tableView.delegate = self
         view.addSubview(tableView)
@@ -62,7 +63,7 @@ class DragonListViewController: BaseViewController {
             switch(result) {
             case .success(_):
                 for dragon in self.viewModel.dragons {
-                    print(dragon)
+                    print(dragon.description ?? "no name")
                 }
             case .failure(let error):
                 print("error \(error)")
@@ -81,10 +82,10 @@ extension DragonListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Consts.tableCellId, for: IndexPath(row: indexPath.row, section: 0))
-        let dragon = self.viewModel.dragons[indexPath.row]
-        cell.textLabel?.text = dragon.title ?? "no title"
-        return cell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Consts.tableCellId, for: IndexPath(row: indexPath.row, section: 0)) as? DragonTableViewCell
+            else { return UITableViewCell() }
+        return cell.configure(from: self.viewModel.dragons[indexPath.row])
+
     }
     
 }

@@ -26,9 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func defaultAppearance() {
-//        UINavigationBar.appearance().barStyle = .black
-//        UINavigationBar.appearance().barTintColor = .barGreen
-//        UINavigationBar.appearance().tintColor = .white
+        // TODO - create sytle
+        // UINavigationBar.appearance().barStyle = .black
+        // UINavigationBar.appearance().barTintColor = .green
+        // UINavigationBar.appearance().tintColor = .white
         let dict: [NSAttributedString.Key: Any] = [
             NSAttributedString.Key.font:  UIFont.abridged("cb24")
         ]

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 enum SFont: String {
-    case textFont = "cr18"
+    case textFont = "cb18"
     
     var font: UIFont {
         return UIFont.abridged(rawValue)
