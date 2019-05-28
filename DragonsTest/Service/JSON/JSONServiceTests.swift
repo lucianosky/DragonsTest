@@ -59,7 +59,7 @@ class JSONServiceTests: QuickSpec {
                 receivedError = nil
             }
             
-            context("When performin request with success") {
+            context("When performing request with success") {
                 it("it should return a dragon" ) {
                     waitUntil{ done in
                         performRequest(.isSuccess){
@@ -72,7 +72,7 @@ class JSONServiceTests: QuickSpec {
                 }
             }
 
-            context("When performin request with failure") {
+            context("When performing request with failure") {
                 it("it should return an error" ) {
                     waitUntil{ done in
                         performRequest(.isFailure){
@@ -86,7 +86,7 @@ class JSONServiceTests: QuickSpec {
                 }
             }
 
-            context("When performin request with parsing error") {
+            context("When performing request with parsing error") {
                 it("it should return an error from decodable" ) {
                     waitUntil{ done in
                         performRequest(.isError){

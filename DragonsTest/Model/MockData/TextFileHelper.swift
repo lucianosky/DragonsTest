@@ -23,18 +23,23 @@ class TextFileHelper {
         return nil
     }
     
-    static func DragonListAsString() -> String? {
-        return TextFileHelper.contentsOfFileAsString(named: "DragonList")
+    static func DragonResposeAsString() -> String? {
+        return TextFileHelper.contentsOfFileAsString(named: "DragonResponse")
     }
     
-    static func DragonListAsData() -> Data? {
-        return TextFileHelper.DragonListAsString()?.data(using: .utf8)
+    static func DragonResponseAsData() -> Data? {
+        return TextFileHelper.DragonResposeAsString()?.data(using: .utf8)
     }
 
-    static func DragonListAsJSON() -> DragonsListResponse {
-        let data =  TextFileHelper.DragonListAsData()
+    static func DragonResponseAsJSON() -> DragonsListResponse {
+        let data =  TextFileHelper.DragonResponseAsData()
         let decoder = JSONDecoder()
         return try! decoder.decode(DragonsListResponse.self, from: data!)
+    }
+    
+    static func DragonList() -> [Dragon] {
+        let dragonResponse = TextFileHelper.DragonResponseAsJSON()
+        return Dragon.listFromResponse(dragonResponse.dragons.compactMap{$0})
     }
 
     static func DragonAsString() -> String? {

@@ -16,6 +16,7 @@
 		6E365EBA229D7FD7000F829F /* DragonModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E365EB8229D7FCB000F829F /* DragonModelTests.swift */; };
 		6E365EBF229D8F67000F829F /* DragonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E365EBE229D8F67000F829F /* DragonListViewModel.swift */; };
 		6E365EC1229DA4B5000F829F /* GreetingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E365EC0229DA4B5000F829F /* GreetingType.swift */; };
+		6E365EC4229DA672000F829F /* DragonListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E365EC2229DA66B000F829F /* DragonListViewModelTests.swift */; };
 		6E4949A4229C4802001612AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949A3229C4802001612AF /* AppDelegate.swift */; };
 		6E4949A6229C4802001612AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949A5229C4802001612AF /* ViewController.swift */; };
 		6E4949A9229C4802001612AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4949A7229C4802001612AF /* Main.storyboard */; };
@@ -29,7 +30,7 @@
 		6E4949DE229C7D16001612AF /* DragonListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949DD229C7D15001612AF /* DragonListResponse.swift */; };
 		6E4949E0229C8565001612AF /* JSONService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949DF229C8565001612AF /* JSONService.swift */; };
 		6E4949E4229CA8F6001612AF /* TextFileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949E3229CA8F6001612AF /* TextFileHelper.swift */; };
-		6E4949E9229CA9C3001612AF /* DragonList.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E4949E8229CA9C3001612AF /* DragonList.json */; };
+		6E4949E9229CA9C3001612AF /* DragonResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E4949E8229CA9C3001612AF /* DragonResponse.json */; };
 		6E4949EE229CB0D1001612AF /* JSONServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949EC229CB0C8001612AF /* JSONServiceTests.swift */; };
 		6E4949F1229CB8A6001612AF /* Dragon.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E4949F0229CB8A6001612AF /* Dragon.json */; };
 		6E4949F3229CC03F001612AF /* NotADragon.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E4949F2229CC03F001612AF /* NotADragon.json */; };
@@ -72,6 +73,7 @@
 		6E365EB8229D7FCB000F829F /* DragonModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonModelTests.swift; sourceTree = "<group>"; };
 		6E365EBE229D8F67000F829F /* DragonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonListViewModel.swift; sourceTree = "<group>"; };
 		6E365EC0229DA4B5000F829F /* GreetingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingType.swift; sourceTree = "<group>"; };
+		6E365EC2229DA66B000F829F /* DragonListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonListViewModelTests.swift; sourceTree = "<group>"; };
 		6E4949A0229C4802001612AF /* DragonsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E4949A3229C4802001612AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E4949A5229C4802001612AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +94,7 @@
 		6E4949DD229C7D15001612AF /* DragonListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonListResponse.swift; sourceTree = "<group>"; };
 		6E4949DF229C8565001612AF /* JSONService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONService.swift; sourceTree = "<group>"; };
 		6E4949E3229CA8F6001612AF /* TextFileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFileHelper.swift; sourceTree = "<group>"; };
-		6E4949E8229CA9C3001612AF /* DragonList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DragonList.json; sourceTree = "<group>"; };
+		6E4949E8229CA9C3001612AF /* DragonResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DragonResponse.json; sourceTree = "<group>"; };
 		6E4949EC229CB0C8001612AF /* JSONServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONServiceTests.swift; sourceTree = "<group>"; };
 		6E4949F0229CB8A6001612AF /* Dragon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Dragon.json; sourceTree = "<group>"; };
 		6E4949F2229CC03F001612AF /* NotADragon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NotADragon.json; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				6E365EBE229D8F67000F829F /* DragonListViewModel.swift */,
+				6E365EC2229DA66B000F829F /* DragonListViewModelTests.swift */,
 			);
 			path = DragonList;
 			sourceTree = "<group>";
@@ -278,7 +281,6 @@
 				6E4949D9229C771C001612AF /* DragonError.swift */,
 				6E4949D7229C76DE001612AF /* DragonResult.swift */,
 				6E365EB2229D7DA8000F829F /* PListHelper.swift */,
-				6E4949E3229CA8F6001612AF /* TextFileHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -286,8 +288,9 @@
 		6E4949E5229CA95A001612AF /* MockData */ = {
 			isa = PBXGroup;
 			children = (
+				6E4949E3229CA8F6001612AF /* TextFileHelper.swift */,
 				6E4949F0229CB8A6001612AF /* Dragon.json */,
-				6E4949E8229CA9C3001612AF /* DragonList.json */,
+				6E4949E8229CA9C3001612AF /* DragonResponse.json */,
 				6E4949F2229CC03F001612AF /* NotADragon.json */,
 			);
 			path = MockData;
@@ -427,7 +430,7 @@
 				6E4949F3229CC03F001612AF /* NotADragon.json in Resources */,
 				6E4949B1229C4806001612AF /* LaunchScreen.storyboard in Resources */,
 				6E4949AE229C4806001612AF /* Assets.xcassets in Resources */,
-				6E4949E9229CA9C3001612AF /* DragonList.json in Resources */,
+				6E4949E9229CA9C3001612AF /* DragonResponse.json in Resources */,
 				6E4949F1229CB8A6001612AF /* Dragon.json in Resources */,
 				6E4949A9229C4802001612AF /* Main.storyboard in Resources */,
 			);
@@ -576,6 +579,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E365EBA229D7FD7000F829F /* DragonModelTests.swift in Sources */,
+				6E365EC4229DA672000F829F /* DragonListViewModelTests.swift in Sources */,
 				6E4949EE229CB0D1001612AF /* JSONServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,10 +21,10 @@ class JSONServiceMock: JSONServiceProtocol {
             if let response = successObject {
                 onCompleted(.success(response as! T))
             } else {
-                onCompleted(.failure(DragonError.modelError("JSONServiceMock")))
+                onCompleted(.failure(DragonError.jsonError("JSONServiceMock")))
             }
         } else {
-            onCompleted(.failure(DragonError.modelError("modelError")))
+            onCompleted(.failure(DragonError.jsonError("modelError")))
         }
     }
     

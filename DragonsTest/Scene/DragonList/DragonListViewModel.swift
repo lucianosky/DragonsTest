@@ -11,7 +11,8 @@ import Foundation
 protocol DragonListViewModelProtocol {
     
     func getDragons(onCompleted: @escaping (DragonResult<Bool>) -> Void)
-    
+    func dragonSound(for dragon: Dragon) -> String
+
 }
 
 class DragonListViewModel: DragonListViewModelProtocol {
@@ -40,8 +41,8 @@ class DragonListViewModel: DragonListViewModelProtocol {
         }
     }
     
-//    func dragonSount(dragon: Dragon) -> String {
-//        
-//    }
+    func dragonSound(for dragon: Dragon) -> String {
+        return dragon.greetingType.sound
+    }
     
 }

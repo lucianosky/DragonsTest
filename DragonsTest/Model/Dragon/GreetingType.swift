@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum GreetingType {
+enum GreetingType: CaseIterable {
     case whoa
     case groar
     case roar

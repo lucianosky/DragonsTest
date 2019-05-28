@@ -1,5 +1,5 @@
 //
-//  DragonModelTests.swift
+//  DragonListViewModelTests.swift
 //  DragonsTest
 //
 //  Created by Luciano Sclovsky on 28/05/19.
@@ -11,28 +11,26 @@ import Nimble
 
 @testable import DragonsTest
 
-class DragonModelTests: QuickSpec {
+class DragonListViewModelTests: QuickSpec {
     
     override func spec() {
         
-        var dragonModel: DragonModel!
-        var jsonServiceMock: JSONServiceMock!
+        var dragonListViewModel: DragonListViewModel!
+        var dragonModelMock: DragonModelMock!
         var receivedSignal: Bool!
-        var receivedDragons: [Dragon]!
+        var receivedOk: Bool!
         var receivedError: Error!
-        let fullURL = "\(PListHelper.baseURL)/dragoslist"
         
-        describe("DragonModelTests") {
+        describe("DragonListViewModelTests") {
             
             func performGetDragons(_ isSuccess: Bool, onCompleted: @escaping () -> Void) {
-                jsonServiceMock.isSuccess = isSuccess
-                jsonServiceMock.successObject = isSuccess ? TextFileHelper.DragonResponseAsJSON() : nil
+                dragonModelMock.isSuccess = isSuccess
                 
-                dragonModel.getDragons(onCompleted: { (result) in
+                dragonListViewModel.getDragons(onCompleted: { (result) in
                     receivedSignal = true
                     switch(result) {
-                    case .success(let dragons):
-                        receivedDragons = dragons
+                    case .success(let ok):
+                        receivedOk = ok
                     case .failure(let error):
                         receivedError = error
                     }
@@ -41,10 +39,10 @@ class DragonModelTests: QuickSpec {
             }
             
             beforeEach {
-                jsonServiceMock = JSONServiceMock()
-                dragonModel = DragonModel(jsonService: jsonServiceMock)
+                dragonModelMock = DragonModelMock()
+                dragonListViewModel = DragonListViewModel(dragonModel: dragonModelMock)
                 receivedSignal = false
-                receivedDragons = nil
+                receivedOk = nil
                 receivedError = nil
             }
             
@@ -56,8 +54,7 @@ class DragonModelTests: QuickSpec {
                         }
                     }
                     expect(receivedSignal).to(beTrue())
-                    expect(receivedDragons.count).to(equal(10))
-                    expect(jsonServiceMock.receivedUrl).to(equal(fullURL))
+                    expect(receivedOk).to(beTrue())
                 }
             }
 
@@ -69,12 +66,11 @@ class DragonModelTests: QuickSpec {
                         }
                     }
                     expect(receivedSignal).to(beTrue())
-                    expect(receivedDragons).to(beNil())
-                    expect(jsonServiceMock.receivedUrl).to(equal(fullURL))
-                    expect(receivedError?.associatedMessage).to(equal("modelError"))
+                    expect(receivedOk).to(beNil())
+                    expect(receivedError?.associatedMessage).to(equal("getDragons"))
                 }
             }
-
+            
         }
     }
 }

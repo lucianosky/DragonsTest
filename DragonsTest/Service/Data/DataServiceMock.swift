@@ -31,7 +31,7 @@ class DataServiceMock: DataServiceProtocol {
     
     func setDragonListResult() {
         isSuccess = true
-        data = TextFileHelper.DragonListAsData()
+        data = TextFileHelper.DragonResponseAsData()
     }
     
     func setDragonResult() {

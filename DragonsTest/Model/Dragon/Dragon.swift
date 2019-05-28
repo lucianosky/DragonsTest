@@ -14,7 +14,7 @@ struct Dragon {
     let description: String?
     let age: Int?
     let image: String?
-    let greetingType: GreetingType?
+    let greetingType: GreetingType
     
     init(dragonResponse: DragonResponse) {
         self.id = dragonResponse.id
