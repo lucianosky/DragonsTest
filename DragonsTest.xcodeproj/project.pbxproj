@@ -15,6 +15,7 @@
 		6E365EB7229D7F6F000F829F /* DragonModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E365EB6229D7F6F000F829F /* DragonModelMock.swift */; };
 		6E365EBA229D7FD7000F829F /* DragonModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E365EB8229D7FCB000F829F /* DragonModelTests.swift */; };
 		6E365EBF229D8F67000F829F /* DragonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E365EBE229D8F67000F829F /* DragonListViewModel.swift */; };
+		6E365EC1229DA4B5000F829F /* GreetingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E365EC0229DA4B5000F829F /* GreetingType.swift */; };
 		6E4949A4229C4802001612AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949A3229C4802001612AF /* AppDelegate.swift */; };
 		6E4949A6229C4802001612AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949A5229C4802001612AF /* ViewController.swift */; };
 		6E4949A9229C4802001612AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4949A7229C4802001612AF /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 		6E365EB6229D7F6F000F829F /* DragonModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonModelMock.swift; sourceTree = "<group>"; };
 		6E365EB8229D7FCB000F829F /* DragonModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonModelTests.swift; sourceTree = "<group>"; };
 		6E365EBE229D8F67000F829F /* DragonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonListViewModel.swift; sourceTree = "<group>"; };
+		6E365EC0229DA4B5000F829F /* GreetingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingType.swift; sourceTree = "<group>"; };
 		6E4949A0229C4802001612AF /* DragonsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E4949A3229C4802001612AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E4949A5229C4802001612AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				6E4949DD229C7D15001612AF /* DragonListResponse.swift */,
 				6E365EAE229D6CBF000F829F /* DragonResponse.swift */,
 				6E365EB0229D7C2C000F829F /* Dragon.swift */,
+				6E365EC0229DA4B5000F829F /* GreetingType.swift */,
 			);
 			path = Dragon;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				6E365EBF229D8F67000F829F /* DragonListViewModel.swift in Sources */,
 				6E4949E4229CA8F6001612AF /* TextFileHelper.swift in Sources */,
 				6E4949F9229CCE8D001612AF /* DataServiceProtocol.swift in Sources */,
+				6E365EC1229DA4B5000F829F /* GreetingType.swift in Sources */,
 				6E4949F7229CCE48001612AF /* JSONServiceMock.swift in Sources */,
 				6E4949E0229C8565001612AF /* JSONService.swift in Sources */,
 			);

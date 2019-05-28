@@ -40,4 +40,8 @@ class DragonListViewModel: DragonListViewModelProtocol {
         }
     }
     
+//    func dragonSount(dragon: Dragon) -> String {
+//        
+//    }
+    
 }

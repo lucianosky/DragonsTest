@@ -14,7 +14,7 @@ struct Dragon {
     let description: String?
     let age: Int?
     let image: String?
-    let greeting_type: String?
+    let greetingType: GreetingType?
     
     init(dragonResponse: DragonResponse) {
         self.id = dragonResponse.id
@@ -22,7 +22,7 @@ struct Dragon {
         self.description = dragonResponse.description
         self.age = dragonResponse.age
         self.image = dragonResponse.image
-        self.greeting_type = dragonResponse.greeting_type
+        self.greetingType = GreetingType.from(string: dragonResponse.greeting_type ?? GreetingType.defaultString)
     }
     
     static func listFromResponse(_ response: [DragonResponse]) -> [Dragon] {
