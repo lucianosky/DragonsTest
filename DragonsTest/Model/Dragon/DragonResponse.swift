@@ -1,17 +1,12 @@
 //
-//  DragonListResponse.swift
+//  DragonResponse.swift
 //  DragonsTest
 //
-//  Created by Luciano Sclovsky on 27/05/19.
+//  Created by Luciano Sclovsky on 28/05/19.
 //  Copyright © 2019 Luciano Sclovsky. All rights reserved.
 //
 
 import Foundation
-
-struct DragonsListResponse: Decodable {
-    let success: Bool
-    let dragons: [DragonResponse?]
-}
 
 struct DragonResponse: Decodable {
     let id: Int
@@ -21,4 +16,3 @@ struct DragonResponse: Decodable {
     let image: String?
     let greeting_type: String?
 }
-

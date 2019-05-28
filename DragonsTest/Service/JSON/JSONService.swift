@@ -8,21 +8,6 @@
 
 import Foundation
 
-protocol  JSONServiceProtocol {
-    func request<T: Decodable> (
-        _ urlString: String,
-        onCompleted: @escaping (DragonResult<T>) -> Void)
-}
-
-class JSONServiceMock: JSONServiceProtocol {
-    
-    func request<T: Decodable> (
-        _ urlString: String,
-        onCompleted: @escaping (DragonResult<T>) -> Void) {
-    }
-    
-}
-
 class JSONService: JSONServiceProtocol {
     
     private var dataService: DataServiceProtocol

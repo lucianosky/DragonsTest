@@ -12,31 +12,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let a = TextFileHelper.DragonListAsString() {
-            print(a)
-        }
-        
-        
-        let url = "https://demo6649570.mockable.io/dragoslist"
-        let jsonService = JSONService()
-        jsonService.request(url) { (result: DragonResult<DragonsListResponse>) in
+
+        let model = DragonModel()
+        model.getDragons { (result) in
             switch(result) {
-            case .success(let dragonsListResponse):
-                print("success \(dragonsListResponse.success)")
-                for dragonResponse in dragonsListResponse.dragons {
-                    print(dragonResponse ?? "nil")
+            case .success(let dragons):
+                for dragon in dragons {
+                    print(dragon)
                 }
             case .failure(let error):
                 print("error \(error)")
             }
-
         }
-
     }
-    
-    
-
-
 }
-
