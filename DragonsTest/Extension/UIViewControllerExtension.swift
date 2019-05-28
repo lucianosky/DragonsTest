@@ -31,11 +31,15 @@ extension UIViewController {
     }
     
     func presentAlertWith(title: AlertTitle, message: String, handler: ((UIAlertAction) -> Void)? = nil ) {
-        let alert = UIAlertController(title: title.title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: handler))
+        presentAlertWith(title: title.title, message: message, okMessage: "Ok")
+    }
+
+    func presentAlertWith(title: String, message: String, okMessage: String, handler: ((UIAlertAction) -> Void)? = nil ) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: okMessage, style: UIAlertAction.Style.default, handler: handler))
         present(alert, animated: true, completion: nil)
     }
-    
+
     func isRunningTests() -> Bool {
         let environment = ProcessInfo().environment
         return (environment["XCInjectBundleInto"] != nil);

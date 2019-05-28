@@ -102,4 +102,19 @@ extension DragonListViewController: UITableViewDataSource, UITableViewDelegate {
 
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.presentAlertWith(title: "Mighty Dragon Says!",
+                              message: viewModel.dragonSound(forDragonInRow: indexPath.row),
+                              okMessage: "Ok, I'm afraid!")
+        unselectRow(true)
+    }
+    
+    func unselectRow(_ animated: Bool) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPath, animated: animated)
+        }
+    }
+
+
+    
 }

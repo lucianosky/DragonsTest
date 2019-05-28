@@ -32,9 +32,20 @@ class DragonListViewModel: DragonListViewModelProtocol {
             
         }
     }
-    
+
     func dragonSound(for dragon: Dragon) -> String {
         return dragon.greetingType.sound
+    }
+    
+    // TODO - missing test case
+    func dragonSound(forDragonInRow row: Int) -> String {
+        if dragons.indices.contains(row) {
+            let dragon = dragons[row]
+            return dragonSound(for: dragon)
+        } else {
+            // TODO
+            return "error"
+        }
     }
     
     // TODO - missing test case
