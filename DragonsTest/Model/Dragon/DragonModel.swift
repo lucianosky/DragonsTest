@@ -20,7 +20,6 @@ class DragonModel: DragonModelProtocol {
 
         let fullURL = "\(PListHelper.baseURL)/dragoslist"
         self.jsonService.request(fullURL) { (result: DragonResult<DragonsListResponse>) in
-
             switch(result) {
                 
             case .success(let dragonsListResponse):

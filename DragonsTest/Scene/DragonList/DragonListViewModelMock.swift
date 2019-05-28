@@ -9,6 +9,8 @@
 import Foundation
 
 class DragonListViewModelMock: DragonListViewModelProtocol {
+    var dragons: [Dragon] = [Dragon]()
+    
     func getDragons(onCompleted: @escaping (DragonResult<Bool>) -> Void) {
     }
     

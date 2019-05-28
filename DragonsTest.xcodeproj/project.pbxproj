@@ -19,9 +19,8 @@
 		6E365EC4229DA672000F829F /* DragonListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E365EC2229DA66B000F829F /* DragonListViewModelTests.swift */; };
 		6E365EC6229DAF95000F829F /* DragonListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E365EC5229DAF95000F829F /* DragonListViewModelProtocol.swift */; };
 		6E365EC8229DAFB0000F829F /* DragonListViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E365EC7229DAFB0000F829F /* DragonListViewModelMock.swift */; };
+		6E365ECC229DC193000F829F /* DragonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E365ECB229DC193000F829F /* DragonListViewController.swift */; };
 		6E4949A4229C4802001612AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949A3229C4802001612AF /* AppDelegate.swift */; };
-		6E4949A6229C4802001612AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949A5229C4802001612AF /* ViewController.swift */; };
-		6E4949A9229C4802001612AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4949A7229C4802001612AF /* Main.storyboard */; };
 		6E4949AC229C4802001612AF /* DragonsTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949AA229C4802001612AF /* DragonsTest.xcdatamodeld */; };
 		6E4949AE229C4806001612AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E4949AD229C4806001612AF /* Assets.xcassets */; };
 		6E4949B1229C4806001612AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4949AF229C4806001612AF /* LaunchScreen.storyboard */; };
@@ -78,10 +77,9 @@
 		6E365EC2229DA66B000F829F /* DragonListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonListViewModelTests.swift; sourceTree = "<group>"; };
 		6E365EC5229DAF95000F829F /* DragonListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonListViewModelProtocol.swift; sourceTree = "<group>"; };
 		6E365EC7229DAFB0000F829F /* DragonListViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonListViewModelMock.swift; sourceTree = "<group>"; };
+		6E365ECB229DC193000F829F /* DragonListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragonListViewController.swift; sourceTree = "<group>"; };
 		6E4949A0229C4802001612AF /* DragonsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E4949A3229C4802001612AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6E4949A5229C4802001612AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6E4949A8229C4802001612AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E4949AB229C4802001612AF /* DragonsTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DragonsTest.xcdatamodel; sourceTree = "<group>"; };
 		6E4949AD229C4806001612AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E4949B0229C4806001612AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -208,6 +206,7 @@
 		6E365EBD229D8F50000F829F /* DragonList */ = {
 			isa = PBXGroup;
 			children = (
+				6E365ECB229DC193000F829F /* DragonListViewController.swift */,
 				6E365EC5229DAF95000F829F /* DragonListViewModelProtocol.swift */,
 				6E365EBE229D8F67000F829F /* DragonListViewModel.swift */,
 				6E365EC7229DAFB0000F829F /* DragonListViewModelMock.swift */,
@@ -243,14 +242,12 @@
 			isa = PBXGroup;
 			children = (
 				6E4949B2229C4806001612AF /* Info.plist */,
+				6E4949AA229C4802001612AF /* DragonsTest.xcdatamodeld */,
 				6E365EBB229D8E8E000F829F /* App */,
 				6E365EBC229D8F44000F829F /* Scene */,
 				6E365EAA229D69C4000F829F /* Model */,
 				6E4949E1229C86BA001612AF /* Service */,
 				6E4949E2229C8781001612AF /* Helper */,
-				6E4949A5229C4802001612AF /* ViewController.swift */,
-				6E4949A7229C4802001612AF /* Main.storyboard */,
-				6E4949AA229C4802001612AF /* DragonsTest.xcdatamodeld */,
 			);
 			path = DragonsTest;
 			sourceTree = "<group>";
@@ -438,7 +435,6 @@
 				6E4949AE229C4806001612AF /* Assets.xcassets in Resources */,
 				6E4949E9229CA9C3001612AF /* DragonResponse.json in Resources */,
 				6E4949F1229CB8A6001612AF /* Dragon.json in Resources */,
-				6E4949A9229C4802001612AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,7 +554,6 @@
 			files = (
 				6E365EB5229D7F4F000F829F /* DragonModelProtocol.swift in Sources */,
 				6E4949DA229C771C001612AF /* DragonError.swift in Sources */,
-				6E4949A6229C4802001612AF /* ViewController.swift in Sources */,
 				6E365EB1229D7C2C000F829F /* Dragon.swift in Sources */,
 				6E365EB3229D7DA8000F829F /* PListHelper.swift in Sources */,
 				6E4949A4229C4802001612AF /* AppDelegate.swift in Sources */,
@@ -571,6 +566,7 @@
 				6E4949AC229C4802001612AF /* DragonsTest.xcdatamodeld in Sources */,
 				6E365EAD229D6A44000F829F /* DragonModel.swift in Sources */,
 				6E4949DC229C787F001612AF /* DataService.swift in Sources */,
+				6E365ECC229DC193000F829F /* DragonListViewController.swift in Sources */,
 				6E4949DE229C7D16001612AF /* DragonListResponse.swift in Sources */,
 				6E4949D8229C76DE001612AF /* DragonResult.swift in Sources */,
 				6E365EBF229D8F67000F829F /* DragonListViewModel.swift in Sources */,
@@ -616,14 +612,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6E4949A7229C4802001612AF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6E4949A8229C4802001612AF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6E4949AF229C4806001612AF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

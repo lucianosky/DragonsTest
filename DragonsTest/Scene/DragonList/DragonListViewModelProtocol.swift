@@ -10,6 +10,7 @@ import Foundation
 
 protocol DragonListViewModelProtocol {
     
+    var dragons: [Dragon] {get}
     func getDragons(onCompleted: @escaping (DragonResult<Bool>) -> Void)
     func dragonSound(for dragon: Dragon) -> String
     

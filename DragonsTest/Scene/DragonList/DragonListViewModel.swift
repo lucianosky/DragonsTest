@@ -20,7 +20,6 @@ class DragonListViewModel: DragonListViewModelProtocol {
     
     func getDragons(onCompleted: @escaping (DragonResult<Bool>) -> Void) {
         self.dragonModel.getDragons { (result) in
-            
             switch(result) {
                 
             case .success(let dragons):
