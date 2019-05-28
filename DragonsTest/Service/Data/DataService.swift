@@ -20,6 +20,7 @@ class DataService: DataServiceProtocol {
             return
         }
         
+        print(urlString)
         let task = URLSession.shared.dataTask(with: url){ (data, response, error) in
 
             if let error = error {
@@ -38,8 +39,8 @@ class DataService: DataServiceProtocol {
                 return
             }
 
-            print("data \(data)")
-            print("response \(response)")
+            // print("data \(data)")
+            // print("response \(response)")
             print("statusCode \(httpResponse.statusCode)")
             onCompleted(.success(data))
             

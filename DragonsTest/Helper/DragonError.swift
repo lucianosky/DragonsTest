@@ -12,12 +12,14 @@ enum DragonError: Error {
     case dataError(String)
     case jsonError(String)
     case modelError(String)
+    case viewModelError(String)
 
     var message: String {
         switch self {
         case .dataError(let msg): return msg
         case .jsonError(let msg): return msg
         case .modelError(let msg): return msg
+        case .viewModelError(let msg): return msg
         }
     }
 }

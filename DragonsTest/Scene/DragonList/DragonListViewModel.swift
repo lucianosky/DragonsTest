@@ -37,4 +37,37 @@ class DragonListViewModel: DragonListViewModelProtocol {
         return dragon.greetingType.sound
     }
     
+    // TODO - missing test case
+    func dragonDescription(forDragonInRow row: Int) -> String {
+        if dragons.indices.contains(row) {
+            let dragon = dragons[row]
+            if let description = dragon.description {
+                return description
+            } else if let title = dragon.title {
+                return title
+            } else {
+                return dragon.greetingType.sound
+            }
+        } else {
+            // TODO
+            return "error"
+        }
+    }
+    
+    // TODO - missing test case
+    func getDragonImage(forDragonInRow row: Int, onCompleted: @escaping (DragonResult<Data>) -> Void) {
+        if dragons.indices.contains(row) {
+            let dragon = dragons[row]
+            if let image = dragon.image {
+                let dataService = DataService()
+                dataService.request(image) { (result) in
+                    onCompleted(result)
+                }
+                return
+            }
+        }
+        onCompleted(.failure(DragonError.viewModelError("error in getDragonImage")))
+    }
+
+    
 }

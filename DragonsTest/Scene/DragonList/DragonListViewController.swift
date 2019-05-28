@@ -84,7 +84,21 @@ extension DragonListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Consts.tableCellId, for: IndexPath(row: indexPath.row, section: 0)) as? DragonTableViewCell
             else { return UITableViewCell() }
-        return cell.configure(from: self.viewModel.dragons[indexPath.row])
+        
+        
+        cell.dragonLabel.text = viewModel.dragonDescription(forDragonInRow: indexPath.row)
+        viewModel.getDragonImage(forDragonInRow: indexPath.row) { (result) in
+            switch result {
+            case .success(let data):
+                DispatchQueue.main.async() {
+                    cell.dragonImageView.image = UIImage(data: data)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+        return cell
 
     }
     

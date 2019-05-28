@@ -15,6 +15,14 @@ class DragonListViewModelMock: DragonListViewModelProtocol {
     }
     
     func dragonSound(for dragon: Dragon) -> String {
-        return ""
+        return "dragonSound"
     }
+    
+    func dragonDescription(forDragonInRow row: Int) -> String {
+        return "dragonDescription"
+    }
+    
+    func getDragonImage(forDragonInRow row: Int, onCompleted: @escaping (DragonResult<Data>) -> Void) {
+    }
+
 }
