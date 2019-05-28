@@ -12,17 +12,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let model = DragonModel()
-        model.getDragons { (result) in
+        
+        let viewModel = DragonListViewModel()
+        viewModel.getDragons { (result) in
             switch(result) {
-            case .success(let dragons):
-                for dragon in dragons {
+            case .success(_):
+                for dragon in viewModel.dragons {
                     print(dragon)
                 }
             case .failure(let error):
                 print("error \(error)")
             }
         }
+
     }
 }
