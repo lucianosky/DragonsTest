@@ -31,6 +31,12 @@ class TextFileHelper {
         return TextFileHelper.DragonListAsString()?.data(using: .utf8)
     }
 
+    static func DragonListAsJSON() -> DragonsListResponse {
+        let data =  TextFileHelper.DragonListAsData()
+        let decoder = JSONDecoder()
+        return try! decoder.decode(DragonsListResponse.self, from: data!)
+    }
+
     static func DragonAsString() -> String? {
         return TextFileHelper.contentsOfFileAsString(named: "Dragon")
     }

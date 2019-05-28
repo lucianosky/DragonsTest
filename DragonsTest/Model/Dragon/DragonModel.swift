@@ -8,10 +8,6 @@
 
 import Foundation
 
-protocol DragonModelProtocol {
-    
-}
-
 class DragonModel: DragonModelProtocol {
     
     private var jsonService: JSONServiceProtocol
