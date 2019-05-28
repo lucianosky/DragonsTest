@@ -35,7 +35,25 @@ class DragonTableViewCell: UITableViewCell {
     
     func configure(from dragon: Dragon) -> DragonTableViewCell {
         self.dragonLabel.text = dragon.title ?? "NO NAME"
+        
+        
+        if let image = dragon.image {
+            
+            let dataService = DataService()
+            dataService.request(image) { (result) in
+                switch result {
+                case .success(let data):
+                    DispatchQueue.main.async() {
+                        self.dragonImageView.image = UIImage(data: data)
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+            }
+            
+        }
+        
         return self
     }
-
+    
 }
