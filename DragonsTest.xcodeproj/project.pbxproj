@@ -176,6 +176,17 @@
 			path = Dragon;
 			sourceTree = "<group>";
 		};
+		6E365EBB229D8E8E000F829F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6E4949A3229C4802001612AF /* AppDelegate.swift */,
+				6E4949AF229C4806001612AF /* LaunchScreen.storyboard */,
+				6E4949AD229C4806001612AF /* Assets.xcassets */,
+				6E4949B2229C4806001612AF /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		6E494997229C4801001612AF = {
 			isa = PBXGroup;
 			children = (
@@ -202,15 +213,12 @@
 		6E4949A2229C4802001612AF /* DragonsTest */ = {
 			isa = PBXGroup;
 			children = (
+				6E365EBB229D8E8E000F829F /* App */,
 				6E365EAA229D69C4000F829F /* Model */,
 				6E4949E1229C86BA001612AF /* Service */,
 				6E4949E2229C8781001612AF /* Helper */,
-				6E4949A3229C4802001612AF /* AppDelegate.swift */,
 				6E4949A5229C4802001612AF /* ViewController.swift */,
 				6E4949A7229C4802001612AF /* Main.storyboard */,
-				6E4949AD229C4806001612AF /* Assets.xcassets */,
-				6E4949AF229C4806001612AF /* LaunchScreen.storyboard */,
-				6E4949B2229C4806001612AF /* Info.plist */,
 				6E4949AA229C4802001612AF /* DragonsTest.xcdatamodeld */,
 			);
 			path = DragonsTest;
