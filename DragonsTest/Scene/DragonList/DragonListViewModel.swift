@@ -59,11 +59,9 @@ class DragonListViewModel: DragonListViewModelProtocol {
         if dragons.indices.contains(row) {
             let dragon = dragons[row]
             if let image = dragon.image {
-                let dataService = DataService()
-                dataService.request(image) { (result) in
+                dragonModel.getDragonImage(url: image) { (result) in
                     onCompleted(result)
                 }
-                return
             }
         }
         onCompleted(.failure(DragonError.viewModelError("error in getDragonImage")))

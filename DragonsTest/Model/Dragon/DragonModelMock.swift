@@ -20,6 +20,9 @@ class DragonModelMock: DragonModelProtocol {
         }
     }
     
+    func getDragonImage(url: String, onCompleted: @escaping (DragonResult<Data>) -> Void) {
+    }
+
     // testing
     var isSuccess = false
 
