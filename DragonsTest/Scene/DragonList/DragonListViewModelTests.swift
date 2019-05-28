@@ -38,6 +38,15 @@ class DragonListViewModelTests: QuickSpec {
                 })
             }
             
+            func expectedSound(greetingType: GreetingType) -> String {
+                switch greetingType {
+                case .whoa: return "Whoaaaaaaa"
+                case .groar: return "Groarrrrrrr!"
+                case .roar: return "Roarrrrrrrr!"
+                case .gr: return "Grrrrrrrrrrr!"
+                }
+            }
+            
             beforeEach {
                 dragonModelMock = DragonModelMock()
                 dragonListViewModel = DragonListViewModel(dragonModel: dragonModelMock)
@@ -70,6 +79,18 @@ class DragonListViewModelTests: QuickSpec {
                     expect(receivedError?.associatedMessage).to(equal("getDragons"))
                 }
             }
+            
+            for greetingType in GreetingType.allCases {
+                context("when dragon greeting type is \(greetingType)") {
+                    let expected = expectedSound(greetingType: greetingType)
+                    it("then the sound should be \(expected)") {
+                        let dragon = Dragon.init(id: 1, title: nil, description: nil, age: nil, image: nil, greetingType: greetingType)
+                        let sound = dragonListViewModel.dragonSound(for: dragon)
+                        expect(sound).to(equal(expected))
+                    }
+                }
+            }
+
             
         }
     }

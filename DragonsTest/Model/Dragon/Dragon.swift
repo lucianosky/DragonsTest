@@ -16,6 +16,15 @@ struct Dragon {
     let image: String?
     let greetingType: GreetingType
     
+    init(id: Int, title: String?, description: String?, age: Int?, image: String?, greetingType: GreetingType) {
+        self.id = id
+        self.title = title
+        self.description = description
+        self.age = age
+        self.image = image
+        self.greetingType = greetingType
+    }
+    
     init(dragonResponse: DragonResponse) {
         self.id = dragonResponse.id
         self.title = dragonResponse.title
