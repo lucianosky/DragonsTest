@@ -9,11 +9,13 @@
 import Foundation
 
 enum DragonError: Error {
-    case apiError(String)
-    
+    case dataError(String)
+    case jsonError(String)
+
     var message: String {
         switch self {
-        case .apiError(let msg): return msg
+        case .dataError(let msg): return msg
+        case .jsonError(let msg): return msg
         }
     }
 }

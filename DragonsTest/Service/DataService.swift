@@ -9,17 +9,60 @@
 import Foundation
 
 protocol DataServiceProtocol {
+
+    func request (
+        _ urlString: String,
+        onCompleted: @escaping (DragonResult<Data>) -> Void)
+
+}
+
+class DataServiceMock: DataServiceProtocol {
+    
+    // protocol
+    
+    func request (
+        _ urlString: String,
+        onCompleted: @escaping (DragonResult<Data>) -> Void) {
+        receivedUrl = urlString
+        if isSuccess {
+            onCompleted(.success(data!))
+        } else {
+            onCompleted(.failure(DragonError.dataError("request")))
+        }
+    }
+    
+    // testing
+    
+    var isSuccess = false
+    var data: Data?
+    var receivedUrl: String?
+    
+    func setDragonListResult() {
+        isSuccess = true
+        data = TextFileHelper.DragonListAsData()
+    }
+    
+    func setDragonResult() {
+        isSuccess = true
+        data = TextFileHelper.DragonAsData()
+    }
+    
+    func setNotADragonResult() {
+        isSuccess = true
+        data = TextFileHelper.NotADragonAsData()
+    }
+    
 }
 
 class DataService: DataServiceProtocol {
     
     func request (
         _ urlString: String,
-        onCompleted: @escaping (APIResult<Data>) -> Void) {
+        onCompleted: @escaping (DragonResult<Data>) -> Void) {
         
         guard let url = URL(string: urlString) else {
             print("Error creating URL")
-            onCompleted(.failure(DragonError.apiError("Error creating URL")))
+            onCompleted(.failure(DragonError.dataError("Error creating URL")))
             return
         }
         
@@ -37,7 +80,7 @@ class DataService: DataServiceProtocol {
                 httpResponse.statusCode == 200
             else {
                 print("error parsing response")
-                onCompleted(.failure(DragonError.apiError("Error parsing response")))
+                onCompleted(.failure(DragonError.dataError("Error parsing response")))
                 return
             }
 

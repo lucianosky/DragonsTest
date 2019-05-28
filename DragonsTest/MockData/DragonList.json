@@ -1,0 +1,80 @@
+{
+    "success": true,
+    "dragons": [
+        {
+            "id": 84375012,
+            "title": "The japanese dragon",
+            "description": "A beautiful japanese dragon.",
+            "age": 3434,
+            "image": "https://stamgent.be/assets/files/site/events/tentoonstellingen/_752x572_crop_center-center/draakblauw.jpg",
+            "greeting_type": "whoa"
+        },
+        {
+            "id": 46347657,
+            "title": "The infernal dragon",
+            "description": "Founded only on the depth of hell.",
+            "age": 249,
+            "image": "https://nemenomicon.files.wordpress.com/2017/06/dragon-wallpaper-images-8.jpg",
+            "greeting_type": "groar"
+        },
+        {
+            "id": 76879554,
+            "title": null,
+            "description": "The mystic blue eyes dragon",
+            "age": 1234,
+            "image": "http://www.mytinyphone.com/uploads/users/starrr72/572828.jpg",
+            "greeting_type": "roar"
+        },
+        null,
+        {
+            "id": 12244094,
+            "title": "The queen!",
+            "description": "The oldest female dragon.",
+            "age": 994824,
+            "image": "https://www.modernmysteryschoolint.com/wp-content/uploads/2017/07/dragon-magick-TO.jpg",
+            "greeting_type": "gr"
+        },
+        {
+            "id": 6769334,
+            "title": "Dust dragon!",
+            "description": "Would be better to not face a dust dragon.",
+            "age": 7958,
+            "image": "https://cpb-us-e1.wpmucdn.com/sites.psu.edu/dist/2/22242/files/2015/03/dragon.jpg"
+        },
+        {
+            "id": 4353442,
+            "title": "Meteor dragon",
+            "description": "Falling from the sky, a ball of fire would make you die.",
+            "age": 144709,
+            "image": "https://storage.ning.com/topology/rest/1.0/file/get/262116841?profile=original"
+        },
+        {
+            "id": 3234977,
+            "title": "The beast",
+            "description": "Wow, hunger!",
+            "age": 1200
+        },
+        {
+            "id": 7149334,
+            "title": "The baby dragon",
+            "description": "bley bley huf huf",
+            "age": 50,
+            "image": "http://ravensheadcofe.co.uk/assets/documents/34/dragon_photo.jpg"
+        },
+        {
+            "id": 6912321,
+            "title": "The black stone",
+            "description": "Where is the scrawny mate? Parrots are the sailors of the mighty desolation. Lord, rob me skull, ye mighty pants!",
+            "age": 360,
+            "image": "https://image.shutterstock.com/image-illustration/blue-dragon-3d-illustration-260nw-688185808.jpg",
+            "greeting_type": null
+        },
+        {
+            "id": 2279432,
+            "title": "Bloody snow",
+            "description": "Pieces of meat are always welcome.",
+            "age": 125,
+            "image": "https://static01.nyt.com/images/2019/04/22/arts/television/15got-dragons/15got-dragons-jumbo.jpg"
+        }
+    ]
+}

@@ -9,17 +9,33 @@
 import Foundation
 
 protocol  JSONServiceProtocol {
+    func request<T: Decodable> (
+        _ urlString: String,
+        onCompleted: @escaping (DragonResult<T>) -> Void)
+}
+
+class JSONServiceMock: JSONServiceProtocol {
+    
+    func request<T: Decodable> (
+        _ urlString: String,
+        onCompleted: @escaping (DragonResult<T>) -> Void) {
+    }
+    
 }
 
 class JSONService: JSONServiceProtocol {
     
+    private var dataService: DataServiceProtocol
+    
+    init(dataService: DataServiceProtocol? = nil) {
+        self.dataService = dataService ?? DataService()
+    }
     
     func request<T: Decodable> (
         _ urlString: String,
-        onCompleted: @escaping (APIResult<T>) -> Void) {
+        onCompleted: @escaping (DragonResult<T>) -> Void) {
         
-        let dataService = DataService()
-        dataService.request(urlString) { (result) in
+        self.dataService.request(urlString) { (result) in
             
             switch(result) {
                 
