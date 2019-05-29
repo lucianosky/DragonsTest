@@ -3,6 +3,8 @@ This is a Dragons API Test App
 
 # Architecture
 - The app is implemented with the MVVM architecture.
+- The app is an implementation of the Clean Architecture. Implementation started with the upper layers, following down to the UI. So, unit testing was keeping the correct flow during development. That's why the UI was left for last (and the Router for later).
+- Clean Code was also pursuit.
 - Since the app is very simple, and the API is a single fixed result, data binding was not implemented yet. 
 - Unit test was implemented with the use of Quick and Nimble for behaviour style testing, but TDD was not used in this project (test were written after the methods).
 - To create the UI the VFL (Visual Format Language) was used, which avoids the usage of Storyboards, with the advantages of quicker and simpler code and reduction of merge conflicts possibilities.
