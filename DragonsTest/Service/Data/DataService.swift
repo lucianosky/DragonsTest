@@ -10,6 +10,32 @@ import Foundation
 
 class DataService: DataServiceProtocol {
     
+    func jsonRequest<T: Decodable> (
+        _ urlString: String,
+        onCompleted: @escaping (DragonResult<T>) -> Void) {
+        
+        self.request(urlString) { (result) in
+            
+            switch(result) {
+                
+            case .success(let data):
+                let decoder = JSONDecoder()
+                do {
+                    let jsonResponse = try decoder.decode(T.self, from: data)
+                    onCompleted(.success(jsonResponse))
+                    print("APIService success!")
+                } catch let error {
+                    print("error \(error)")
+                    onCompleted(.failure(error))
+                }
+                
+            case .failure(let error):
+                onCompleted(.failure(error))
+            }
+            
+        }
+    }
+    
     func request (
         _ urlString: String,
         onCompleted: @escaping (DragonResult<Data>) -> Void) {

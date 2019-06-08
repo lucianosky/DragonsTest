@@ -12,7 +12,13 @@ class DataServiceMock: DataServiceProtocol {
     
     // protocol
     
-    func request (
+    // TODO mock
+    func jsonRequest<T: Decodable> (
+        _ urlString: String,
+        onCompleted: @escaping (DragonResult<T>) -> Void) {
+    }
+    
+   func request (
         _ urlString: String,
         onCompleted: @escaping (DragonResult<Data>) -> Void) {
         receivedUrl = urlString

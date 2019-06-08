@@ -10,6 +10,10 @@ import Foundation
 
 protocol DataServiceProtocol {
     
+    func jsonRequest<T: Decodable> (
+        _ urlString: String,
+        onCompleted: @escaping (DragonResult<T>) -> Void)
+
     func request (
         _ urlString: String,
         onCompleted: @escaping (DragonResult<Data>) -> Void)
