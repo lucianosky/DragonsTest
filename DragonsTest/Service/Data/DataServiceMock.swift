@@ -16,6 +16,16 @@ class DataServiceMock: DataServiceProtocol {
     func jsonRequest<T: Decodable> (
         _ urlString: String,
         onCompleted: @escaping (DragonResult<T>) -> Void) {
+        receivedUrl = urlString
+        if isSuccess {
+            if let response = successObject {
+                onCompleted(.success(response as! T))
+            } else {
+                onCompleted(.failure(DragonError.jsonError("JSONServiceMock")))
+            }
+        } else {
+            onCompleted(.failure(DragonError.jsonError("modelError")))
+        }
     }
     
    func request (
@@ -34,7 +44,8 @@ class DataServiceMock: DataServiceProtocol {
     var isSuccess = false
     var data: Data?
     var receivedUrl: String?
-    
+    var successObject: Any?
+
     func setDragonListResult() {
         isSuccess = true
         data = TextFileHelper.DragonResponseAsData()

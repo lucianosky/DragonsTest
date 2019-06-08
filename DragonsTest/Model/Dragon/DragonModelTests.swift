@@ -16,7 +16,7 @@ class DragonModelTests: QuickSpec {
     override func spec() {
         
         var dragonModel: DragonModel!
-        var jsonServiceMock: JSONServiceMock!
+        var dataServiceMock: DataServiceMock!
         var receivedSignal: Bool!
         var receivedDragons: [Dragon]!
         var receivedError: Error!
@@ -25,8 +25,8 @@ class DragonModelTests: QuickSpec {
         describe("DragonModelTests") {
             
             func performGetDragons(_ isSuccess: Bool, onCompleted: @escaping () -> Void) {
-                jsonServiceMock.isSuccess = isSuccess
-                jsonServiceMock.successObject = isSuccess ? TextFileHelper.DragonResponseAsJSON() : nil
+                dataServiceMock.isSuccess = isSuccess
+                dataServiceMock.successObject = isSuccess ? TextFileHelper.DragonResponseAsJSON() : nil
                 
                 dragonModel.getDragons(onCompleted: { (result) in
                     receivedSignal = true
@@ -41,8 +41,8 @@ class DragonModelTests: QuickSpec {
             }
             
             beforeEach {
-                jsonServiceMock = JSONServiceMock()
-                dragonModel = DragonModel(jsonService: jsonServiceMock)
+                dataServiceMock = DataServiceMock()
+                dragonModel = DragonModel(dataService: dataServiceMock)
                 receivedSignal = false
                 receivedDragons = nil
                 receivedError = nil
@@ -57,7 +57,7 @@ class DragonModelTests: QuickSpec {
                     }
                     expect(receivedSignal).to(beTrue())
                     expect(receivedDragons.count).to(equal(10))
-                    expect(jsonServiceMock.receivedUrl).to(equal(fullURL))
+                    expect(dataServiceMock.receivedUrl).to(equal(fullURL))
                 }
             }
 
@@ -70,7 +70,7 @@ class DragonModelTests: QuickSpec {
                     }
                     expect(receivedSignal).to(beTrue())
                     expect(receivedDragons).to(beNil())
-                    expect(jsonServiceMock.receivedUrl).to(equal(fullURL))
+                    expect(dataServiceMock.receivedUrl).to(equal(fullURL))
                     expect(receivedError?.associatedMessage).to(equal("modelError"))
                 }
             }
