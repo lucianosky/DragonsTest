@@ -42,13 +42,10 @@
 		6E4949DA229C771C001612AF /* DragonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949D9229C771C001612AF /* DragonError.swift */; };
 		6E4949DC229C787F001612AF /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949DB229C787F001612AF /* DataService.swift */; };
 		6E4949DE229C7D16001612AF /* DragonListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949DD229C7D15001612AF /* DragonListResponse.swift */; };
-		6E4949E0229C8565001612AF /* JSONService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949DF229C8565001612AF /* JSONService.swift */; };
 		6E4949E4229CA8F6001612AF /* TextFileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949E3229CA8F6001612AF /* TextFileHelper.swift */; };
 		6E4949E9229CA9C3001612AF /* DragonResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E4949E8229CA9C3001612AF /* DragonResponse.json */; };
 		6E4949F1229CB8A6001612AF /* Dragon.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E4949F0229CB8A6001612AF /* Dragon.json */; };
 		6E4949F3229CC03F001612AF /* NotADragon.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E4949F2229CC03F001612AF /* NotADragon.json */; };
-		6E4949F5229CCDD1001612AF /* JSONServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949F4229CCDD1001612AF /* JSONServiceProtocol.swift */; };
-		6E4949F7229CCE48001612AF /* JSONServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949F6229CCE48001612AF /* JSONServiceMock.swift */; };
 		6E4949F9229CCE8D001612AF /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949F8229CCE8D001612AF /* DataServiceProtocol.swift */; };
 		6E4949FB229CCEA8001612AF /* DataServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949FA229CCEA8001612AF /* DataServiceMock.swift */; };
 		8387F84CACC4C6DFCC4CFBA1 /* Pods_DragonsTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3899F21EE757B2B85D5162D /* Pods_DragonsTestTests.framework */; };
@@ -118,14 +115,11 @@
 		6E4949D9229C771C001612AF /* DragonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonError.swift; sourceTree = "<group>"; };
 		6E4949DB229C787F001612AF /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		6E4949DD229C7D15001612AF /* DragonListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonListResponse.swift; sourceTree = "<group>"; };
-		6E4949DF229C8565001612AF /* JSONService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONService.swift; sourceTree = "<group>"; };
 		6E4949E3229CA8F6001612AF /* TextFileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFileHelper.swift; sourceTree = "<group>"; };
 		6E4949E8229CA9C3001612AF /* DragonResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DragonResponse.json; sourceTree = "<group>"; };
 		6E4949EC229CB0C8001612AF /* DataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTests.swift; sourceTree = "<group>"; };
 		6E4949F0229CB8A6001612AF /* Dragon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Dragon.json; sourceTree = "<group>"; };
 		6E4949F2229CC03F001612AF /* NotADragon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NotADragon.json; sourceTree = "<group>"; };
-		6E4949F4229CCDD1001612AF /* JSONServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONServiceProtocol.swift; sourceTree = "<group>"; };
-		6E4949F6229CCE48001612AF /* JSONServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONServiceMock.swift; sourceTree = "<group>"; };
 		6E4949F8229CCE8D001612AF /* DataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceProtocol.swift; sourceTree = "<group>"; };
 		6E4949FA229CCEA8001612AF /* DataServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceMock.swift; sourceTree = "<group>"; };
 		740AFB5541EE4E5A1AF1B02E /* Pods-DragonsTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonsTestTests.release.xcconfig"; path = "Target Support Files/Pods-DragonsTestTests/Pods-DragonsTestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -188,16 +182,6 @@
 				6E4949AD229C4806001612AF /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		6E365EA8229D6995000F829F /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				6E4949F4229CCDD1001612AF /* JSONServiceProtocol.swift */,
-				6E4949DF229C8565001612AF /* JSONService.swift */,
-				6E4949F6229CCE48001612AF /* JSONServiceMock.swift */,
-			);
-			path = JSON;
 			sourceTree = "<group>";
 		};
 		6E365EA9229D69A5000F829F /* Data */ = {
@@ -324,7 +308,6 @@
 		6E4949E1229C86BA001612AF /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				6E365EA8229D6995000F829F /* JSON */,
 				6E365EA9229D69A5000F829F /* Data */,
 			);
 			path = Service;
@@ -619,7 +602,6 @@
 				6E4949FB229CCEA8001612AF /* DataServiceMock.swift in Sources */,
 				6E31D1B6229DDC12004A5FCD /* UIFontExtension.swift in Sources */,
 				6E31D1C0229DE287004A5FCD /* UILabelExtension.swift in Sources */,
-				6E4949F5229CCDD1001612AF /* JSONServiceProtocol.swift in Sources */,
 				6E31D1B8229DDCB3004A5FCD /* StringExtension.swift in Sources */,
 				6E31D1AF229DCB0B004A5FCD /* UIViewControllerExtension.swift in Sources */,
 				6E365EB7229D7F6F000F829F /* DragonModelMock.swift in Sources */,
@@ -637,8 +619,6 @@
 				6E31D1AB229DCAAA004A5FCD /* UIViewExtension.swift in Sources */,
 				6E4949F9229CCE8D001612AF /* DataServiceProtocol.swift in Sources */,
 				6E365EC1229DA4B5000F829F /* GreetingType.swift in Sources */,
-				6E4949F7229CCE48001612AF /* JSONServiceMock.swift in Sources */,
-				6E4949E0229C8565001612AF /* JSONService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
