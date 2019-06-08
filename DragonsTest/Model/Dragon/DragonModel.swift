@@ -18,7 +18,7 @@ class DragonModel: DragonModelProtocol {
 
     func getDragons(onCompleted: @escaping (DragonResult<[Dragon]>) -> Void) {
         let fullURL = "\(PListHelper.baseURL)/dragoslist"
-        self.dataService.jsonRequest(fullURL) { (result: DragonResult<DragonsListResponse>) in
+        dataService.jsonRequest(fullURL) { (result: DragonResult<DragonsListResponse>) in
             switch(result) {
             case .success(let dragonsListResponse):
                 // compactMap will remove null elements
@@ -31,9 +31,7 @@ class DragonModel: DragonModelProtocol {
     }
     
     // TODO missing test case
-    // TODO fix architecture issue: DataService x DataService
     func getDragonImage(url: String, onCompleted: @escaping (DragonResult<Data>) -> Void) {
-        let dataService = DataService()
         dataService.request(url) { (result) in
             onCompleted(result)
         }
