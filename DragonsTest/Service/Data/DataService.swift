@@ -10,6 +10,12 @@ import Foundation
 
 class DataService: DataServiceProtocol {
     
+    private var urlSessionWrappper: URLSessionWrappperProtocol
+    
+    init(urlSessionWrappper: URLSessionWrappperProtocol? = nil) {
+        self.urlSessionWrappper = urlSessionWrappper ?? URLSessionWrapper()
+    }
+
     func jsonRequest<T: Decodable> (
         _ urlString: String,
         onCompleted: @escaping (DragonResult<T>) -> Void) {
@@ -47,7 +53,8 @@ class DataService: DataServiceProtocol {
         }
         
         print(urlString)
-        let task = URLSession.shared.dataTask(with: url){ (data, response, error) in
+//        let task = URLSession.shared.dataTask(with: url){ (data, response, error) in
+        let task = urlSessionWrappper.dataTask(with: url){ (data, response, error) in
 
             if let error = error {
                 print("error \(error)")
@@ -77,3 +84,22 @@ class DataService: DataServiceProtocol {
     }
     
 }
+
+protocol URLSessionWrappperProtocol {
+    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
+}
+
+class URLSessionWrapper: URLSessionWrappperProtocol {
+    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+        return URLSession.shared.dataTask(with: url){ (data, response, error) in
+            completionHandler(data, response, error)
+        }
+    }
+}
+
+class URLSessionWrapperMock: URLSessionWrappperProtocol {
+    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+        return URLSessionDataTask()
+    }
+}
+

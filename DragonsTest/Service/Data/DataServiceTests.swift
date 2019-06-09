@@ -19,25 +19,25 @@ private enum RequestResult {
 
 class DataServiceTests: QuickSpec {
     
-//    override func spec() {
-//        
-//        var dataService: DataService!
-//        var dataServiceMock: DataServiceMock!
-//        var receivedSignal: Bool!
-//        var receivedDragon: DragonResponse!
-//        var receivedError: Error!
-//        let dragonUrl = "dragonUrl"
-//
+    override func spec() {
+        
+        var dataService: DataService!
+        var urlSessionWrapperMock: URLSessionWrapperMock!
+        var receivedSignal: Bool!
+        var receivedDragon: DragonResponse!
+        var receivedError: Error!
+        let dragonUrl = "dragonUrl"
+
 //        describe("DataService") {
 //
 //            func performRequest(_ requestResult: RequestResult, onCompleted: @escaping () -> Void) {
 //                switch requestResult {
 //                case .isSuccess:
-//                    dataServiceMock.setDragonResult()
+//                    urlSessionWrapperMock.setDragonResult()
 //                case .isFailure:
 //                    break
 //                case .isError:
-//                    dataServiceMock.setNotADragonResult()
+//                    urlSessionWrapperMock.setNotADragonResult()
 //                }
 //                dataService.request(dragonUrl, onCompleted: { (result: DragonResult<DragonResponse>) in
 //                    receivedSignal = true
@@ -52,8 +52,8 @@ class DataServiceTests: QuickSpec {
 //            }
 //            
 //            beforeEach {
-//                dataServiceMock = DataServiceMock()
-//                dataService = DataService(dataService: dataServiceMock)
+//                urlSessionWrapperMock = URLSessionWrapperMock()
+//                dataService = DataService(urlSessionWrappper: urlSessionWrapperMock)
 //                receivedSignal = false
 //                receivedDragon = nil
 //                receivedError = nil
@@ -68,7 +68,7 @@ class DataServiceTests: QuickSpec {
 //                    }
 //                    expect(receivedSignal).to(beTrue())
 //                    expect(receivedDragon.age).to(equal(3434))
-//                    expect(dataServiceMock.receivedUrl).to(equal(dragonUrl))
+//                    expect(urlSessionWrapperMock.receivedUrl).to(equal(dragonUrl))
 //                }
 //            }
 //
@@ -81,7 +81,7 @@ class DataServiceTests: QuickSpec {
 //                    }
 //                    expect(receivedSignal).to(beTrue())
 //                    expect(receivedDragon).to(beNil())
-//                    expect(dataServiceMock.receivedUrl).to(equal(dragonUrl))
+//                    expect(urlSessionWrapperMock.receivedUrl).to(equal(dragonUrl))
 //                    expect(receivedError?.associatedMessage).to(equal("request"))
 //                }
 //            }
@@ -95,10 +95,10 @@ class DataServiceTests: QuickSpec {
 //                    }
 //                    expect(receivedSignal).to(beTrue())
 //                    expect(receivedDragon).to(beNil())
-//                    expect(dataServiceMock.receivedUrl).to(equal(dragonUrl))
+//                    expect(urlSessionWrapperMock.receivedUrl).to(equal(dragonUrl))
 //                    expect(receivedError?.associatedMessage).to(equal("The data couldn’t be read because it is missing."))
 //                }
 //            }
 //        }
-//    }
+    }
 }
