@@ -43,7 +43,7 @@
 		6E4949DC229C787F001612AF /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949DB229C787F001612AF /* DataService.swift */; };
 		6E4949DE229C7D16001612AF /* DragonListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949DD229C7D15001612AF /* DragonListResponse.swift */; };
 		6E4949E4229CA8F6001612AF /* TextFileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949E3229CA8F6001612AF /* TextFileHelper.swift */; };
-		6E4949E9229CA9C3001612AF /* DragonResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E4949E8229CA9C3001612AF /* DragonResponse.json */; };
+		6E4949E9229CA9C3001612AF /* DragonList.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E4949E8229CA9C3001612AF /* DragonList.json */; };
 		6E4949F1229CB8A6001612AF /* Dragon.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E4949F0229CB8A6001612AF /* Dragon.json */; };
 		6E4949F3229CC03F001612AF /* NotADragon.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E4949F2229CC03F001612AF /* NotADragon.json */; };
 		6E4949F9229CCE8D001612AF /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949F8229CCE8D001612AF /* DataServiceProtocol.swift */; };
@@ -120,7 +120,7 @@
 		6E4949DB229C787F001612AF /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		6E4949DD229C7D15001612AF /* DragonListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonListResponse.swift; sourceTree = "<group>"; };
 		6E4949E3229CA8F6001612AF /* TextFileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFileHelper.swift; sourceTree = "<group>"; };
-		6E4949E8229CA9C3001612AF /* DragonResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DragonResponse.json; sourceTree = "<group>"; };
+		6E4949E8229CA9C3001612AF /* DragonList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DragonList.json; sourceTree = "<group>"; };
 		6E4949EC229CB0C8001612AF /* DataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTests.swift; sourceTree = "<group>"; };
 		6E4949F0229CB8A6001612AF /* Dragon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Dragon.json; sourceTree = "<group>"; };
 		6E4949F2229CC03F001612AF /* NotADragon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NotADragon.json; sourceTree = "<group>"; };
@@ -337,7 +337,7 @@
 			children = (
 				6E4949E3229CA8F6001612AF /* TextFileHelper.swift */,
 				6E4949F0229CB8A6001612AF /* Dragon.json */,
-				6E4949E8229CA9C3001612AF /* DragonResponse.json */,
+				6E4949E8229CA9C3001612AF /* DragonList.json */,
 				6E4949F2229CC03F001612AF /* NotADragon.json */,
 			);
 			path = MockData;
@@ -489,7 +489,7 @@
 				6E4949B1229C4806001612AF /* LaunchScreen.storyboard in Resources */,
 				6E4949AE229C4806001612AF /* Assets.xcassets in Resources */,
 				6E31D1B4229DDB41004A5FCD /* Comic Book.otf in Resources */,
-				6E4949E9229CA9C3001612AF /* DragonResponse.json in Resources */,
+				6E4949E9229CA9C3001612AF /* DragonList.json in Resources */,
 				6E4949F1229CB8A6001612AF /* Dragon.json in Resources */,
 				6E31D1B3229DDB41004A5FCD /* Comic Book Bold.otf in Resources */,
 			);

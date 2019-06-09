@@ -19,6 +19,7 @@ This is a Dragons API Test App
 
 # To Do List
 ## Due to limitations in time several aspects were left to be done in the near future:
+- Refactor names: DragonError, DragonResult
 - User interface was implemented last. There's poor UX at this moment. The tableView could be changed by a slider. The dragon image should be shown in a second scene with a full size image, along with other Dragon's properties. Colors need to be improved.
 - Error messages are not popping yet on the View Controller, although this should be easy since events are flowing down to the VC.
 - Current API does not make possible to change alert button visual properties. A new interface should be made for the dragon sound for bigger impact. Perhaps playing also a sound.

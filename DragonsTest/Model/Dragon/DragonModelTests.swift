@@ -27,7 +27,7 @@ class DragonModelTests: QuickSpec {
             
             func performGetDragons(_ isSuccess: Bool, onCompleted: @escaping () -> Void) {
                 dataServiceMock.isSuccess = isSuccess
-                dataServiceMock.successObject = isSuccess ? TextFileHelper.DragonResponseAsJSON() : nil
+                dataServiceMock.successObject = isSuccess ? TextFileHelper.DragonListAsJSON() : nil
                 
                 dragonModel.getDragons(onCompleted: { (result) in
                     receivedSignal = true
