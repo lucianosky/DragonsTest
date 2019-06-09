@@ -22,14 +22,19 @@ class DataServiceTests: QuickSpec {
         var receivedError: Error!
         let requestUrl = "requestUrl"
         let someData = TextFileHelper.DragonAsData()
+        let performRequestError = "performRequestError"
 
         describe("DataService") {
 
-            func performRequest(_ isSuccess: Bool, data: Data?, statusCode: Int, onCompleted: @escaping () -> Void) {
+            func performRequest(_ isSuccess: Bool, urlString: String, data: Data?, statusCode: Int, onCompleted: @escaping () -> Void) {
                 urlSessionWrapperMock.isSuccess = isSuccess
-                urlSessionWrapperMock.data = data
+                if isSuccess {
+                    urlSessionWrapperMock.data = data
+                } else {
+                    urlSessionWrapperMock.error = DragonError.dataError(performRequestError)
+                }
                 urlSessionWrapperMock.urlResponse = HTTPURLResponse(url: URL(string: requestUrl)!, statusCode: statusCode, httpVersion: "HTTP/1.1", headerFields: nil)!
-                dataService.request(requestUrl, onCompleted: { (result: DragonResult<Data>) in
+                dataService.request(urlString, onCompleted: { (result: DragonResult<Data>) in
                     receivedSignal = true
                     switch(result) {
                     case .success(let data):
@@ -52,17 +57,62 @@ class DataServiceTests: QuickSpec {
             context("When performing request with success") {
                 it("it should return data" ) {
                     waitUntil{ done in
-                        performRequest(true, data: someData, statusCode: 200){
+                        performRequest(true, urlString: requestUrl, data: someData, statusCode: 200){
                             done()
                         }
                     }
                     expect(receivedSignal).to(beTrue())
                     expect(receivedData).to(equal(someData))
+                    expect(receivedError).to(beNil())
                     expect(urlSessionWrapperMock.receivedUrl).to(equal(requestUrl))
                     expect(urlSessionWrapperMock.dataTask.resumeWasCalled).to(beTrue())
                 }
             }
 
+            context("When performing request with URL error") {
+                it("it should return Error creating URL" ) {
+                    waitUntil{ done in
+                        performRequest(true, urlString: "", data: someData, statusCode: 200){
+                            done()
+                        }
+                    }
+                    expect(receivedSignal).to(beTrue())
+                    expect(receivedData).to(beNil())
+                    expect(receivedError.associatedMessage).to(equal("Error creating URL"))
+                    expect(urlSessionWrapperMock.receivedUrl).to(beNil())
+                    expect(urlSessionWrapperMock.dataTask.resumeWasCalled).to(beFalse())
+                }
+            }
+            
+            context("When performing request with error") {
+                it("it should return performRequestError" ) {
+                    waitUntil{ done in
+                        performRequest(false, urlString: requestUrl, data: nil, statusCode: 200){
+                            done()
+                        }
+                    }
+                    expect(receivedSignal).to(beTrue())
+                    expect(receivedData).to(beNil())
+                    expect(receivedError.associatedMessage).to(equal(performRequestError))
+                    expect(urlSessionWrapperMock.receivedUrl).to(equal(requestUrl))
+                    expect(urlSessionWrapperMock.dataTask.resumeWasCalled).to(beTrue())
+                }
+            }
+            
+            context("When performing request with statusCode error") {
+                it("it should return Error parsing response" ) {
+                    waitUntil{ done in
+                        performRequest(true, urlString: requestUrl, data: someData, statusCode: 404){
+                            done()
+                        }
+                    }
+                    expect(receivedSignal).to(beTrue())
+                    expect(receivedData).to(beNil())
+                    expect(receivedError.associatedMessage).to(equal("Error parsing response"))
+                    expect(urlSessionWrapperMock.receivedUrl).to(equal(requestUrl))
+                    expect(urlSessionWrapperMock.dataTask.resumeWasCalled).to(beTrue())
+                }
+            }
         }
     }
 }

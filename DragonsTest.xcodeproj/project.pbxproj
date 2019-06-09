@@ -47,11 +47,11 @@
 		6E4949F1229CB8A6001612AF /* Dragon.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E4949F0229CB8A6001612AF /* Dragon.json */; };
 		6E4949F3229CC03F001612AF /* NotADragon.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E4949F2229CC03F001612AF /* NotADragon.json */; };
 		6E4949F9229CCE8D001612AF /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949F8229CCE8D001612AF /* DataServiceProtocol.swift */; };
-		6E4949FB229CCEA8001612AF /* DataServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949FA229CCEA8001612AF /* DataServiceMock.swift */; };
 		6E9EB97C22AD927E005B3D4F /* URLSessionWrappperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EB97B22AD927E005B3D4F /* URLSessionWrappperProtocol.swift */; };
 		6E9EB97E22AD92AC005B3D4F /* URLSessionWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EB97D22AD92AC005B3D4F /* URLSessionWrapper.swift */; };
 		6E9EB98022AD92C5005B3D4F /* URLSessionWrapperMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EB97F22AD92C5005B3D4F /* URLSessionWrapperMock.swift */; };
 		6E9EB98322ADAE27005B3D4F /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EB98222ADAE27005B3D4F /* MockURLSessionDataTask.swift */; };
+		6E9EB98522ADBE12005B3D4F /* DataServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949FA229CCEA8001612AF /* DataServiceMock.swift */; };
 		8387F84CACC4C6DFCC4CFBA1 /* Pods_DragonsTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3899F21EE757B2B85D5162D /* Pods_DragonsTestTests.framework */; };
 		99D6D78D9CE19CB905BF27B9 /* Pods_DragonsTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378DF5AAC95B13415A4D4D2C /* Pods_DragonsTestUITests.framework */; };
 		BD951A2E1622FA5CD73FB430 /* Pods_DragonsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A34494DBC4645DE50FDE6 /* Pods_DragonsTest.framework */; };
@@ -622,13 +622,13 @@
 				6E365EAF229D6CBF000F829F /* DragonResponse.swift in Sources */,
 				6E9EB97E22AD92AC005B3D4F /* URLSessionWrapper.swift in Sources */,
 				6E365EC6229DAF95000F829F /* DragonListViewModelProtocol.swift in Sources */,
-				6E4949FB229CCEA8001612AF /* DataServiceMock.swift in Sources */,
 				6E31D1B6229DDC12004A5FCD /* UIFontExtension.swift in Sources */,
 				6E31D1C0229DE287004A5FCD /* UILabelExtension.swift in Sources */,
 				6E31D1B8229DDCB3004A5FCD /* StringExtension.swift in Sources */,
 				6E31D1AF229DCB0B004A5FCD /* UIViewControllerExtension.swift in Sources */,
 				6E365EB7229D7F6F000F829F /* DragonModelMock.swift in Sources */,
 				6E365EC8229DAFB0000F829F /* DragonListViewModelMock.swift in Sources */,
+				6E9EB98522ADBE12005B3D4F /* DataServiceMock.swift in Sources */,
 				6E9EB98022AD92C5005B3D4F /* URLSessionWrapperMock.swift in Sources */,
 				6E4949AC229C4802001612AF /* DragonsTest.xcdatamodeld in Sources */,
 				6E365EAD229D6A44000F829F /* DragonModel.swift in Sources */,
