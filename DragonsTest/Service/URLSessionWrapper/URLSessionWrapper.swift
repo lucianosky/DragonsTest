@@ -9,9 +9,11 @@
 import Foundation
 
 class URLSessionWrapper: URLSessionWrappperProtocol {
-    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+    
+    func dataTask(with url: URL, completionHandler: @escaping DataTaskResult) -> URLSessionDataTaskProtocol {
         return URLSession.shared.dataTask(with: url){ (data, response, error) in
             completionHandler(data, response, error)
         }
     }
+    
 }

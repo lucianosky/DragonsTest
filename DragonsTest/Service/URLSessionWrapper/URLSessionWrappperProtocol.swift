@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias DataTaskResult = (Data?, URLResponse?, Error?) -> Void
+
 protocol URLSessionWrappperProtocol {
-    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
+    func dataTask(with url: URL, completionHandler: @escaping DataTaskResult) -> URLSessionDataTaskProtocol
 }

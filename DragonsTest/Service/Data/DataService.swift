@@ -53,7 +53,6 @@ class DataService: DataServiceProtocol {
         }
         
         print(urlString)
-//        let task = URLSession.shared.dataTask(with: url){ (data, response, error) in
         let task = urlSessionWrappper.dataTask(with: url){ (data, response, error) in
 
             if let error = error {
@@ -71,9 +70,6 @@ class DataService: DataServiceProtocol {
                 onCompleted(.failure(DragonError.dataError("Error parsing response")))
                 return
             }
-
-            // print("data \(data)")
-            // print("response \(response)")
             print("statusCode \(httpResponse.statusCode)")
             onCompleted(.success(data))
             
@@ -84,3 +80,4 @@ class DataService: DataServiceProtocol {
     }
     
 }
+
