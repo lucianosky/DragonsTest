@@ -84,22 +84,3 @@ class DataService: DataServiceProtocol {
     }
     
 }
-
-protocol URLSessionWrappperProtocol {
-    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
-}
-
-class URLSessionWrapper: URLSessionWrappperProtocol {
-    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
-        return URLSession.shared.dataTask(with: url){ (data, response, error) in
-            completionHandler(data, response, error)
-        }
-    }
-}
-
-class URLSessionWrapperMock: URLSessionWrappperProtocol {
-    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
-        return URLSessionDataTask()
-    }
-}
-
