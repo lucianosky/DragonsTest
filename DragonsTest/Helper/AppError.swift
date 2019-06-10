@@ -1,5 +1,5 @@
 //
-//  DragonError.swift
+//  AppError.swift
 //  DragonsTest
 //
 //  Created by Luciano Sclovsky on 27/05/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum DragonError: Error {
+enum AppError: Error {
     case dataError(String)
     case jsonError(String)
     case modelError(String)
@@ -27,7 +27,7 @@ enum DragonError: Error {
 extension Error {
     
     var associatedMessage: String {
-        if let dragonError = self as? DragonError {
+        if let dragonError = self as? AppError {
             return dragonError.message
         }
         return localizedDescription

@@ -15,27 +15,27 @@ class DataServiceMock: DataServiceProtocol {
     // TODO mock
     func jsonRequest<T: Decodable> (
         _ urlString: String,
-        onCompleted: @escaping (DragonResult<T>) -> Void) {
+        onCompleted: @escaping (ServiceResult<T>) -> Void) {
         receivedUrl = urlString
         if isSuccess {
             if let response = successObject {
                 onCompleted(.success(response as! T))
             } else {
-                onCompleted(.failure(DragonError.jsonError("JSONServiceMock")))
+                onCompleted(.failure(AppError.jsonError("JSONServiceMock")))
             }
         } else {
-            onCompleted(.failure(DragonError.jsonError("modelError")))
+            onCompleted(.failure(AppError.jsonError("modelError")))
         }
     }
     
    func request (
         _ urlString: String,
-        onCompleted: @escaping (DragonResult<Data>) -> Void) {
+        onCompleted: @escaping (ServiceResult<Data>) -> Void) {
         receivedUrl = urlString
         if isSuccess {
             onCompleted(.success(data!))
         } else {
-            onCompleted(.failure(DragonError.dataError("request")))
+            onCompleted(.failure(AppError.dataError("request")))
         }
     }
     

@@ -18,7 +18,7 @@ class DragonListViewModel: DragonListViewModelProtocol {
         self.dragonModel = dragonModel ?? DragonModel()
     }
     
-    func getDragons(onCompleted: @escaping (DragonResult<Bool>) -> Void) {
+    func getDragons(onCompleted: @escaping (ServiceResult<Bool>) -> Void) {
         self.dragonModel.getDragons { (result) in
             switch(result) {
                 
@@ -66,7 +66,7 @@ class DragonListViewModel: DragonListViewModelProtocol {
     }
     
     // TODO - missing test case
-    func getDragonImage(forDragonInRow row: Int, onCompleted: @escaping (DragonResult<Data>) -> Void) {
+    func getDragonImage(forDragonInRow row: Int, onCompleted: @escaping (ServiceResult<Data>) -> Void) {
         if dragons.indices.contains(row) {
             let dragon = dragons[row]
             if let image = dragon.image {
@@ -75,7 +75,7 @@ class DragonListViewModel: DragonListViewModelProtocol {
                 }
             }
         }
-        onCompleted(.failure(DragonError.viewModelError("error in getDragonImage")))
+        onCompleted(.failure(AppError.viewModelError("error in getDragonImage")))
     }
 
     

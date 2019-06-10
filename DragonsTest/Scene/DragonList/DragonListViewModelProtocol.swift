@@ -11,10 +11,10 @@ import Foundation
 protocol DragonListViewModelProtocol {
     
     var dragons: [Dragon] {get}
-    func getDragons(onCompleted: @escaping (DragonResult<Bool>) -> Void)
+    func getDragons(onCompleted: @escaping (ServiceResult<Bool>) -> Void)
     func dragonSound(for dragon: Dragon) -> String
     func dragonSound(forDragonInRow row: Int) -> String
     func dragonDescription(forDragonInRow row: Int) -> String
-    func getDragonImage(forDragonInRow row: Int, onCompleted: @escaping (DragonResult<Data>) -> Void) 
+    func getDragonImage(forDragonInRow row: Int, onCompleted: @escaping (ServiceResult<Data>) -> Void) 
 
 }

@@ -12,10 +12,10 @@ protocol DataServiceProtocol {
     
     func jsonRequest<T: Decodable> (
         _ urlString: String,
-        onCompleted: @escaping (DragonResult<T>) -> Void)
+        onCompleted: @escaping (ServiceResult<T>) -> Void)
 
     func request (
         _ urlString: String,
-        onCompleted: @escaping (DragonResult<Data>) -> Void)
+        onCompleted: @escaping (ServiceResult<Data>) -> Void)
     
 }

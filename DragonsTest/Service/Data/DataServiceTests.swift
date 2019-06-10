@@ -33,10 +33,10 @@ class DataServiceTests: QuickSpec {
                 if isSuccess {
                     urlSessionWrapperMock.data = data
                 } else {
-                    urlSessionWrapperMock.error = DragonError.dataError(performRequestError)
+                    urlSessionWrapperMock.error = AppError.dataError(performRequestError)
                 }
                 urlSessionWrapperMock.urlResponse = HTTPURLResponse(url: URL(string: requestUrl)!, statusCode: statusCode, httpVersion: "HTTP/1.1", headerFields: nil)!
-                dataService.jsonRequest(urlString, onCompleted: { (result: DragonResult<DragonResponse>) in
+                dataService.jsonRequest(urlString, onCompleted: { (result: ServiceResult<DragonResponse>) in
                     receivedSignal = true
                     switch(result) {
                     case .success(let dragon):
@@ -53,10 +53,10 @@ class DataServiceTests: QuickSpec {
                 if isSuccess {
                     urlSessionWrapperMock.data = data
                 } else {
-                    urlSessionWrapperMock.error = DragonError.dataError(performRequestError)
+                    urlSessionWrapperMock.error = AppError.dataError(performRequestError)
                 }
                 urlSessionWrapperMock.urlResponse = HTTPURLResponse(url: URL(string: requestUrl)!, statusCode: statusCode, httpVersion: "HTTP/1.1", headerFields: nil)!
-                dataService.request(urlString, onCompleted: { (result: DragonResult<Data>) in
+                dataService.request(urlString, onCompleted: { (result: ServiceResult<Data>) in
                     receivedSignal = true
                     switch(result) {
                     case .success(let data):

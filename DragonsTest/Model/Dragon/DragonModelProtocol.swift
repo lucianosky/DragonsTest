@@ -9,6 +9,6 @@
 import Foundation
 
 protocol DragonModelProtocol {
-    func getDragons(onCompleted: @escaping (DragonResult<[Dragon]>) -> Void)
-    func getDragonImage(url: String, onCompleted: @escaping (DragonResult<Data>) -> Void)
+    func getDragons(onCompleted: @escaping (ServiceResult<[Dragon]>) -> Void)
+    func getDragonImage(url: String, onCompleted: @escaping (ServiceResult<Data>) -> Void)
 }

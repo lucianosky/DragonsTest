@@ -1,5 +1,5 @@
 //
-//  DragonResult.swift
+//  ServiceResult.swift
 //  DragonsTest
 //
 //  Created by Luciano Sclovsky on 27/05/19.

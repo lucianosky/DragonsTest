@@ -12,15 +12,15 @@ class DragonModelMock: DragonModelProtocol {
     
     // protocol
 
-    func getDragons(onCompleted: @escaping (DragonResult<[Dragon]>) -> Void) {
+    func getDragons(onCompleted: @escaping (ServiceResult<[Dragon]>) -> Void) {
         if isSuccess {
             onCompleted(.success(TextFileHelper.DragonList()))
         } else {
-            onCompleted(.failure(DragonError.modelError("getDragons")))
+            onCompleted(.failure(AppError.modelError("getDragons")))
         }
     }
     
-    func getDragonImage(url: String, onCompleted: @escaping (DragonResult<Data>) -> Void) {
+    func getDragonImage(url: String, onCompleted: @escaping (ServiceResult<Data>) -> Void) {
     }
 
     // testing

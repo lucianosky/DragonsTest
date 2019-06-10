@@ -18,7 +18,7 @@ class DataService: DataServiceProtocol {
 
     func jsonRequest<T: Decodable> (
         _ urlString: String,
-        onCompleted: @escaping (DragonResult<T>) -> Void) {
+        onCompleted: @escaping (ServiceResult<T>) -> Void) {
         
         self.request(urlString) { (result) in
             
@@ -44,11 +44,11 @@ class DataService: DataServiceProtocol {
     
     func request (
         _ urlString: String,
-        onCompleted: @escaping (DragonResult<Data>) -> Void) {
+        onCompleted: @escaping (ServiceResult<Data>) -> Void) {
         
         guard let url = URL(string: urlString) else {
             print("Error creating URL")
-            onCompleted(.failure(DragonError.dataError("Error creating URL")))
+            onCompleted(.failure(AppError.dataError("Error creating URL")))
             return
         }
         
@@ -67,7 +67,7 @@ class DataService: DataServiceProtocol {
                 httpResponse.statusCode == 200
             else {
                 print("error parsing response")
-                onCompleted(.failure(DragonError.dataError("Error parsing response")))
+                onCompleted(.failure(AppError.dataError("Error parsing response")))
                 return
             }
             print("statusCode \(httpResponse.statusCode)")

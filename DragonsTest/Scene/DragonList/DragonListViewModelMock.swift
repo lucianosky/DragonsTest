@@ -11,7 +11,7 @@ import Foundation
 class DragonListViewModelMock: DragonListViewModelProtocol {
     var dragons: [Dragon] = [Dragon]()
     
-    func getDragons(onCompleted: @escaping (DragonResult<Bool>) -> Void) {
+    func getDragons(onCompleted: @escaping (ServiceResult<Bool>) -> Void) {
     }
     
     func dragonSound(for dragon: Dragon) -> String {
@@ -22,7 +22,7 @@ class DragonListViewModelMock: DragonListViewModelProtocol {
         return "dragonDescription"
     }
     
-    func getDragonImage(forDragonInRow row: Int, onCompleted: @escaping (DragonResult<Data>) -> Void) {
+    func getDragonImage(forDragonInRow row: Int, onCompleted: @escaping (ServiceResult<Data>) -> Void) {
     }
     
     func dragonSound(forDragonInRow row: Int) -> String {
