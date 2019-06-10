@@ -34,6 +34,16 @@ struct Dragon {
         self.greetingType = GreetingType.from(string: dragonResponse.greeting_type ?? GreetingType.defaultString)
     }
     
+    func getDescriptionText() -> String {
+        if let description = self.description {
+            return description
+        } else if let title = self.title {
+            return title
+        } else {
+            return self.greetingType.sound
+        }
+    }
+    
     static func listFromResponse(_ response: [DragonResponse]) -> [Dragon] {
         return response.map(Dragon.init)
     }

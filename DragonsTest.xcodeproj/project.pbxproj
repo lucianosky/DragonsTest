@@ -52,6 +52,8 @@
 		6E9EB98022AD92C5005B3D4F /* URLSessionWrapperMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EB97F22AD92C5005B3D4F /* URLSessionWrapperMock.swift */; };
 		6E9EB98322ADAE27005B3D4F /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EB98222ADAE27005B3D4F /* MockURLSessionDataTask.swift */; };
 		6E9EB98522ADBE12005B3D4F /* DataServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4949FA229CCEA8001612AF /* DataServiceMock.swift */; };
+		6E9EB98722AF0469005B3D4F /* LogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EB98622AF0468005B3D4F /* LogHelper.swift */; };
+		6E9EB98922AF106F005B3D4F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EB98822AF106F005B3D4F /* main.swift */; };
 		8387F84CACC4C6DFCC4CFBA1 /* Pods_DragonsTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3899F21EE757B2B85D5162D /* Pods_DragonsTestTests.framework */; };
 		99D6D78D9CE19CB905BF27B9 /* Pods_DragonsTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378DF5AAC95B13415A4D4D2C /* Pods_DragonsTestUITests.framework */; };
 		BD951A2E1622FA5CD73FB430 /* Pods_DragonsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A34494DBC4645DE50FDE6 /* Pods_DragonsTest.framework */; };
@@ -130,6 +132,8 @@
 		6E9EB97D22AD92AC005B3D4F /* URLSessionWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionWrapper.swift; sourceTree = "<group>"; };
 		6E9EB97F22AD92C5005B3D4F /* URLSessionWrapperMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionWrapperMock.swift; sourceTree = "<group>"; };
 		6E9EB98222ADAE27005B3D4F /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
+		6E9EB98622AF0468005B3D4F /* LogHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHelper.swift; sourceTree = "<group>"; };
+		6E9EB98822AF106F005B3D4F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		740AFB5541EE4E5A1AF1B02E /* Pods-DragonsTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonsTestTests.release.xcconfig"; path = "Target Support Files/Pods-DragonsTestTests/Pods-DragonsTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		843254010BE81CEF8F484A7B /* Pods-DragonsTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonsTest.debug.xcconfig"; path = "Target Support Files/Pods-DragonsTest/Pods-DragonsTest.debug.xcconfig"; sourceTree = "<group>"; };
 		9ECD061C809B2A80F5141ECC /* Pods-DragonsTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonsTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-DragonsTestUITests/Pods-DragonsTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -283,6 +287,7 @@
 		6E4949A2229C4802001612AF /* DragonsTest */ = {
 			isa = PBXGroup;
 			children = (
+				6E9EB98822AF106F005B3D4F /* main.swift */,
 				6E4949B2229C4806001612AF /* Info.plist */,
 				6E4949AA229C4802001612AF /* DragonsTest.xcdatamodeld */,
 				6E365EBB229D8E8E000F829F /* App */,
@@ -326,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				6E4949D9229C771C001612AF /* AppError.swift */,
+				6E9EB98622AF0468005B3D4F /* LogHelper.swift */,
 				6E4949D7229C76DE001612AF /* ServiceResult.swift */,
 				6E365EB2229D7DA8000F829F /* PListHelper.swift */,
 			);
@@ -611,6 +617,7 @@
 			files = (
 				6E31D1BE229DE0D3004A5FCD /* UIImageViewExtension.swift in Sources */,
 				6E31D1AD229DCAC8004A5FCD /* NSLayoutContraintExtension.swift in Sources */,
+				6E9EB98922AF106F005B3D4F /* main.swift in Sources */,
 				6E365EB5229D7F4F000F829F /* DragonModelProtocol.swift in Sources */,
 				6E9EB98322ADAE27005B3D4F /* MockURLSessionDataTask.swift in Sources */,
 				6E4949DA229C771C001612AF /* AppError.swift in Sources */,
@@ -640,6 +647,7 @@
 				6E31D1BC229DDFED004A5FCD /* DragonTableViewCell.swift in Sources */,
 				6E365EBF229D8F67000F829F /* DragonListViewModel.swift in Sources */,
 				6E4949E4229CA8F6001612AF /* TextFileHelper.swift in Sources */,
+				6E9EB98722AF0469005B3D4F /* LogHelper.swift in Sources */,
 				6E31D1AB229DCAAA004A5FCD /* UIViewExtension.swift in Sources */,
 				6E4949F9229CCE8D001612AF /* DataServiceProtocol.swift in Sources */,
 				6E365EC1229DA4B5000F829F /* GreetingType.swift in Sources */,

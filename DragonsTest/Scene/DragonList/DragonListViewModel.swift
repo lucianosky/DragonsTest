@@ -8,6 +8,13 @@
 
 import Foundation
 
+private struct Consts {
+    static let missingDragonDescription = "Missing dragonDescription"
+    static let missingDragonSound = "Missing dragonSound"
+    static let errorInGetDragonImage = "Error in getDragonImage"
+}
+
+
 class DragonListViewModel: DragonListViewModelProtocol {
     
     private(set) var dragons: [Dragon] = [Dragon]()
@@ -37,32 +44,20 @@ class DragonListViewModel: DragonListViewModelProtocol {
         return dragon.greetingType.sound
     }
     
-    // TODO - missing test case
     func dragonSound(forDragonInRow row: Int) -> String {
         if dragons.indices.contains(row) {
-            let dragon = dragons[row]
-            return dragonSound(for: dragon)
-        } else {
-            // TODO
-            return "error"
+            return dragons[row].greetingType.sound
         }
+        LogHelper.shared.warning(Consts.missingDragonSound)
+        return Consts.missingDragonSound
     }
     
-    // TODO - missing test case
     func dragonDescription(forDragonInRow row: Int) -> String {
         if dragons.indices.contains(row) {
-            let dragon = dragons[row]
-            if let description = dragon.description {
-                return description
-            } else if let title = dragon.title {
-                return title
-            } else {
-                return dragon.greetingType.sound
-            }
-        } else {
-            // TODO
-            return "error"
+            return dragons[row].getDescriptionText()
         }
+        LogHelper.shared.warning(Consts.missingDragonDescription)
+        return Consts.missingDragonDescription
     }
     
     // TODO - missing test case
@@ -75,7 +70,7 @@ class DragonListViewModel: DragonListViewModelProtocol {
                 }
             }
         }
-        onCompleted(.failure(AppError.viewModelError("error in getDragonImage")))
+        onCompleted(.failure(AppError.viewModelError(Consts.errorInGetDragonImage)))
     }
 
     

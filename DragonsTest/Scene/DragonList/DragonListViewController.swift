@@ -62,7 +62,7 @@ class DragonListViewController: BaseViewController {
             switch(result) {
             case .success(_):
                 for dragon in self.viewModel.dragons {
-                    print(dragon.description ?? "no name")
+                    print(dragon.description ?? "no description")
                 }
             case .failure(let error):
                 print("error \(error)")

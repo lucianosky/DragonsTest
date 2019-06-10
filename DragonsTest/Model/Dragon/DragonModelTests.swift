@@ -67,7 +67,7 @@ class DragonModelTests: QuickSpec {
                         }
                     }
                     expect(receivedSignal).to(beTrue())
-                    expect(receivedDragons.count).to(equal(10))
+                    expect(receivedDragons.count).to(equal(12))
                     expect(dataServiceMock.receivedUrl).to(equal(fullURL))
                 }
             }

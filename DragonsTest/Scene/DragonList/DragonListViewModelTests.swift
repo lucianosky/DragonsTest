@@ -80,6 +80,41 @@ class DragonListViewModelTests: QuickSpec {
                 }
             }
             
+            context("When performing dragonSound for existing row") {
+                it("it should return a sound" ) {
+                    waitUntil{ done in
+                        performGetDragons(true){
+                            done()
+                        }
+                    }
+                    let sound = dragonListViewModel.dragonSound(forDragonInRow: 0)
+                    expect(sound).to(equal("Whoaaaaaaa"))
+                    let soundError = dragonListViewModel.dragonSound(forDragonInRow: -1)
+                    expect(soundError).to(equal("Missing dragonSound"))
+                }
+            }
+
+            context("When performing dragonDescription for existing row") {
+                it("it should return dragon's getDescriptionText()" ) {
+                    waitUntil{ done in
+                        performGetDragons(true){
+                            done()
+                        }
+                    }
+                    let descriptionDescr = dragonListViewModel.dragonDescription(forDragonInRow: 0)
+                    expect(descriptionDescr).to(equal("A beautiful japanese dragon."))
+ 
+                    let descriptionTitle = dragonListViewModel.dragonDescription(forDragonInRow: 10)
+                    expect(descriptionTitle).to(equal("Just a title"))
+                    
+                    let descriptionSound = dragonListViewModel.dragonDescription(forDragonInRow: 11)
+                    expect(descriptionSound).to(equal("Grrrrrrrrrrr!"))
+                    
+                    let descriptionError = dragonListViewModel.dragonDescription(forDragonInRow: -1)
+                    expect(descriptionError).to(equal("Missing dragonDescription"))
+                }
+            }
+
             for greetingType in GreetingType.allCases {
                 context("when dragon greeting type is \(greetingType)") {
                     let expected = expectedSound(greetingType: greetingType)
