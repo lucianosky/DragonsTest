@@ -19,7 +19,11 @@ This is a Dragons API Test App
 
 # To Do List
 ## Due to limitations in time several aspects were left to be done in the near future:
-- WIP: Strings as Consts in classes
+- DragonsListViewController.cellForRowAt -> refactor call to DragonListViewModel.getDragonImage -> rename to willShowDragon
+    - also create dictionary to work as cache for downloaded images
+    - after that complete the DragonListViewModelTests
+    - and after cover ViewController with tests
+- WIP: (temporary) Strings as Consts in classes
 - User interface was implemented last. There's poor UX at this moment. The tableView could be changed by a slider. The dragon image should be shown in a second scene with a full size image, along with other Dragon's properties. Colors need to be improved.
 - Error messages are not popping yet on the View Controller, although this should be easy since events are flowing down to the VC.
 - Current API does not make possible to change alert button visual properties. A new interface should be made for the dragon sound for bigger impact. Perhaps playing also a sound.
@@ -30,7 +34,7 @@ This is a Dragons API Test App
 - Replace strings consts in each class
 
 # Unit Test
-- WIP - DragonListViewModelTests
+- WIP - 
 - WIP - Missing Unit Tests
 - Coverage at this point is 48%. It should be noted that it was over 60% during most development, but later it was left behind. 
 - ViewController does not include unit test coverage yet.
